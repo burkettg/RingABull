@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-// note.
+
 @main
 struct RingABullApp: App {
     var body: some Scene {

@@ -17,6 +17,9 @@ struct ContentView: View {
             Spacer()
                 .frame(height: 10)
             Text("Fun stuff.")
+            Spacer()
+                .frame(height: 10)
+            Text("Fun stuff again.")
         }
         .padding()
     }
