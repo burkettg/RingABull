@@ -1,0 +1,16 @@
+{
+  "source": "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Hello, world!",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 22
+        }
+      }
+    ]
+  },
+  "version": 1
+}
