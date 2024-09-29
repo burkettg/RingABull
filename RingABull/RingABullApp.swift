@@ -2,7 +2,7 @@
 //  RingABullApp.swift
 //  RingABull
 //
-//  Created by Greg Burkett on 9/29/24.
+//  Created by Greg and Nick Burkett on 9/29/24.
 //
 
 import SwiftUI
