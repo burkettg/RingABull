@@ -4,26 +4,26 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Hello, world! Bubba.",
+        "key": "Wlcome to Ring-A-Bull!",
         "location": {
-          "startingColumn": 18,
-          "startingLine": 16
+          "startingColumn": 22,
+          "startingLine": 31
         }
       },
       {
         "comment": "",
-        "key": "Fun stuff.",
+        "key": "PLAY GAME",
         "location": {
-          "startingColumn": 18,
-          "startingLine": 19
+          "startingColumn": 26,
+          "startingLine": 46
         }
       },
       {
         "comment": "",
-        "key": "Fun stuff again.",
+        "key": "SET LEVEL",
         "location": {
-          "startingColumn": 18,
-          "startingLine": 22
+          "startingColumn": 26,
+          "startingLine": 58
         }
       }
     ]
