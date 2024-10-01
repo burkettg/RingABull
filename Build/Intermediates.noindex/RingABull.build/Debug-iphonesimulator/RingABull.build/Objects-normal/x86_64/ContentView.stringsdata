@@ -4,9 +4,25 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Hello, world!",
+        "key": "Hello, world! Bubba.",
         "location": {
-          "startingColumn": 58,
+          "startingColumn": 18,
+          "startingLine": 16
+        }
+      },
+      {
+        "comment": "",
+        "key": "Fun stuff.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 19
+        }
+      },
+      {
+        "comment": "",
+        "key": "Fun stuff again.",
+        "location": {
+          "startingColumn": 18,
           "startingLine": 22
         }
       }
