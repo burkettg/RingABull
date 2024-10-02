@@ -6,7 +6,7 @@
  *
  * I am creating this branch to play around in XCode and get a background going.
  */
-
+// change.
 import SwiftUI      //Import SwifUI framework - this is used to build user interfaces
 
 //Here we want to declare a new struct that will be needed for the visual component/screen
