@@ -31,6 +31,15 @@ extension DeveloperToolsSupport.ColorResource {
 @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 extension DeveloperToolsSupport.ImageResource {
 
+<<<<<<< Updated upstream
+=======
+    /// The "BackGroundImageV4" asset catalog image resource.
+    static let backGroundImageV4 = DeveloperToolsSupport.ImageResource(name: "BackGroundImageV4", bundle: resourceBundle)
+
+    /// The "GameMode00" asset catalog image resource.
+    static let gameMode00 = DeveloperToolsSupport.ImageResource(name: "GameMode00", bundle: resourceBundle)
+
+>>>>>>> Stashed changes
 }
 
 // MARK: - Color Symbol Extensions -
@@ -70,6 +79,27 @@ extension SwiftUI.ShapeStyle where Self == SwiftUI.Color {
 @available(macCatalyst, unavailable)
 extension AppKit.NSImage {
 
+<<<<<<< Updated upstream
+=======
+    /// The "BackGroundImageV4" asset catalog image.
+    static var backGroundImageV4: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .backGroundImageV4)
+#else
+        .init()
+#endif
+    }
+
+    /// The "GameMode00" asset catalog image.
+    static var gameMode00: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .gameMode00)
+#else
+        .init()
+#endif
+    }
+
+>>>>>>> Stashed changes
 }
 #endif
 
@@ -78,6 +108,27 @@ extension AppKit.NSImage {
 @available(watchOS, unavailable)
 extension UIKit.UIImage {
 
+<<<<<<< Updated upstream
+=======
+    /// The "BackGroundImageV4" asset catalog image.
+    static var backGroundImageV4: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .backGroundImageV4)
+#else
+        .init()
+#endif
+    }
+
+    /// The "GameMode00" asset catalog image.
+    static var gameMode00: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .gameMode00)
+#else
+        .init()
+#endif
+    }
+
+>>>>>>> Stashed changes
 }
 #endif
 

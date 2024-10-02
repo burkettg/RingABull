@@ -4,6 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+<<<<<<< Updated upstream
+=======
+		<key>Assets.car</key>
+		<data>
+		EQGCFpeb1q80IMPYXcFsseAtKnA=
+		</data>
+>>>>>>> Stashed changes
 		<key>Info.plist</key>
 		<data>
 		T0pOhWunexWLHRvce9mV8IOyKI0=
@@ -14,7 +21,11 @@
 		</data>
 		<key>RingABull.debug.dylib</key>
 		<data>
+<<<<<<< Updated upstream
 		GWn63LXJVHGE6PVd2Xb0JRsLYUc=
+=======
+		1IvS2Cc4XDC6NrrYX84dJPW9Rzc=
+>>>>>>> Stashed changes
 		</data>
 		<key>__preview.dylib</key>
 		<data>
@@ -23,11 +34,25 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+<<<<<<< Updated upstream
+=======
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eUSDPckk7vgJXFkVzGNLmmaFe7Ix8yiktvpZuCea4JQ=
+			</data>
+		</dict>
+>>>>>>> Stashed changes
 		<key>RingABull.debug.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
+<<<<<<< Updated upstream
 			P917DkviLSFERBXlzAQ7q/0QFWqi+f92XaWcZ1n87q0=
+=======
+			eF3yDWu14wmjMtJwl+ME2ZKf/VORAx22nhAcEqkZKKM=
+>>>>>>> Stashed changes
 			</data>
 		</dict>
 		<key>__preview.dylib</key>
