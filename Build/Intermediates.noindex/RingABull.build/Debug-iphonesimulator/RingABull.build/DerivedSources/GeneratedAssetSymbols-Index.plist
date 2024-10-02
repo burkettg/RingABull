@@ -5,7 +5,18 @@
 	<key>colors</key>
 	<array/>
 	<key>images</key>
-	<array/>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameBackGroundImageV4</string>
+			<key>relativePath</key>
+			<string>./BackGroundImageV4.imageset</string>
+			<key>swiftSymbol</key>
+			<string>backGroundImageV4</string>
+		</dict>
+	</array>
 	<key>symbols</key>
 	<array/>
 </dict>

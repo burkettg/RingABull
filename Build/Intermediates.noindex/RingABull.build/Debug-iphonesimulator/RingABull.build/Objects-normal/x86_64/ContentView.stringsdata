@@ -4,10 +4,26 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Hello, world!",
+        "key": "Wlcome to Ring-A-Bull!",
         "location": {
-          "startingColumn": 58,
-          "startingLine": 22
+          "startingColumn": 22,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "PLAY GAME",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "SET LEVEL",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 58
         }
       }
     ]
