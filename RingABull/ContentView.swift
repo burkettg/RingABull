@@ -12,6 +12,8 @@ import SwiftUI      //Import SwifUI framework - this is used to build user inter
 //Here we want to declare a new struct that will be needed for the visual component/screen
 struct ContentView: View {
     @State private var isGameActive = false     //State control of the game... is game play active.
+    @State private var showingPhysicsWorld = false
+    @State private var currentWorld = 1
     
     //Here is the main body of the contentView where elements of the UI are defined
     var body: some View {
@@ -57,6 +59,19 @@ struct ContentView: View {
                             .cornerRadius(10)               //Define the corner radius of the button
                     }
                     
+                    //Define a button that will trigger the game play
+                    Button(action: {
+                        showingPhysicsWorld = true     //Set the isGameActive flag to true
+                    }){
+                        Text("Take a Swing")      //Define what the button displays
+                            .font(.title2)      //Define the font for the button's txt
+                            .padding()                      //Add some padding
+                            .frame(width: 170, height: 50)  //Define some frame dimensions
+                            .background(Color.blue)         //Define the background color
+                            .foregroundColor(.white)        //Define the foreground color
+                            .cornerRadius(10)               //Define the corner radius of the button
+                    }
+                    
                     //Define a second button
                     Button(action: {
                         print("Settings!")      //Define the action of the button
@@ -69,16 +84,49 @@ struct ContentView: View {
                             .foregroundColor(.white)            //Define a foreground color
                             .cornerRadius(10)                   //Add the corner radius of the button
                     }
-                }
+                    
+                } // End VStack.
                 
-            }
-            
+            } // End ZStack.
             //Here I will present the GameView modally as a full screen view when isGameActive = true
-            .fullScreenCover(isPresented: $isGameActive){
-                GameView()  //When isGameActive = true, call GameView() func
+            .fullScreenCover(isPresented: $isGameActive){ GameView()  }
+            // Greg added stuff..
+            .fullScreenCover(isPresented: $showingPhysicsWorld, content: {
+                // Add some configuration settings..
+                //  ... blah blah ...
+                
+                //PhysicsWorldContainerView()
+                PhysicsWorldContainerView(currentWorldView: getCurrentWorldView())
+                    .onDisappear(perform: reset)
+                   // .ignoresSafeArea()
+                
+            })
+            
+        } // End Navigation View.
+        
+    } // End Main Body.
+    
+    // Function to return the current world based on progression
+        func getCurrentWorldView() -> AnyView {
+            switch currentWorld {
+            case 1:
+                return AnyView(PhysicsWorldView_Level01())  // World 1
+            case 2:
+                return AnyView(PhysicsWorldView_Level01())  // World 2
+            case 3:
+                return AnyView(PhysicsWorldView_Level01())  // World 3
+            default:
+                return AnyView(PhysicsWorldView_Level01())  // Default to World 1 if unknown
             }
         }
-    }
+    
+}
+
+func reset() {
+    //  Change some settings, score, history ,etc..  stuff here..
+    //  .. blah blah ...
+    print("back to contentView from PhysicsWorldView_Level01.")
+    
 }
 
 #Preview {

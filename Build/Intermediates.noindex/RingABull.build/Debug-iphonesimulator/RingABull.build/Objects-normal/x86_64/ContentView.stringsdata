@@ -7,7 +7,7 @@
         "key": "Wlcome to Ring-A-Bull!",
         "location": {
           "startingColumn": 26,
-          "startingLine": 32
+          "startingLine": 34
         }
       },
       {
@@ -15,7 +15,15 @@
         "key": "Start Game",
         "location": {
           "startingColumn": 30,
-          "startingLine": 51
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "Take a Swing",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 66
         }
       },
       {
@@ -23,7 +31,7 @@
         "key": "SET LEVEL",
         "location": {
           "startingColumn": 30,
-          "startingLine": 64
+          "startingLine": 79
         }
       }
     ]
