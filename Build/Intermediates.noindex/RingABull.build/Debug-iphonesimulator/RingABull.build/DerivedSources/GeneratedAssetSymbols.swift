@@ -34,6 +34,9 @@ extension DeveloperToolsSupport.ImageResource {
     /// The "BackGroundImageV4" asset catalog image resource.
     static let backGroundImageV4 = DeveloperToolsSupport.ImageResource(name: "BackGroundImageV4", bundle: resourceBundle)
 
+    /// The "GameMode00" asset catalog image resource.
+    static let gameMode00 = DeveloperToolsSupport.ImageResource(name: "GameMode00", bundle: resourceBundle)
+
 }
 
 // MARK: - Color Symbol Extensions -
@@ -82,6 +85,15 @@ extension AppKit.NSImage {
 #endif
     }
 
+    /// The "GameMode00" asset catalog image.
+    static var gameMode00: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .gameMode00)
+#else
+        .init()
+#endif
+    }
+
 }
 #endif
 
@@ -94,6 +106,15 @@ extension UIKit.UIImage {
     static var backGroundImageV4: UIKit.UIImage {
 #if !os(watchOS)
         .init(resource: .backGroundImageV4)
+#else
+        .init()
+#endif
+    }
+
+    /// The "GameMode00" asset catalog image.
+    static var gameMode00: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .gameMode00)
 #else
         .init()
 #endif

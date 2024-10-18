@@ -6,24 +6,24 @@
         "comment": "",
         "key": "Wlcome to Ring-A-Bull!",
         "location": {
-          "startingColumn": 22,
-          "startingLine": 31
+          "startingColumn": 26,
+          "startingLine": 32
         }
       },
       {
         "comment": "",
-        "key": "PLAY GAME",
+        "key": "Start Game",
         "location": {
-          "startingColumn": 26,
-          "startingLine": 46
+          "startingColumn": 30,
+          "startingLine": 51
         }
       },
       {
         "comment": "",
         "key": "SET LEVEL",
         "location": {
-          "startingColumn": 26,
-          "startingLine": 58
+          "startingColumn": 30,
+          "startingLine": 64
         }
       }
     ]

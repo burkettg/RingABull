@@ -16,6 +16,16 @@
 			<key>swiftSymbol</key>
 			<string>backGroundImageV4</string>
 		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameGameMode00</string>
+			<key>relativePath</key>
+			<string>./GameMode00.imageset</string>
+			<key>swiftSymbol</key>
+			<string>gameMode00</string>
+		</dict>
 	</array>
 	<key>symbols</key>
 	<array/>
