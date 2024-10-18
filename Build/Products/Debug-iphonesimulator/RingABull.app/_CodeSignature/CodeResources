@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		EQGCFpeb1q80IMPYXcFsseAtKnA=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		T0pOhWunexWLHRvce9mV8IOyKI0=
+		eF4hSHzIVxMfurse3TEzPlb/uQo=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -14,7 +18,7 @@
 		</data>
 		<key>RingABull.debug.dylib</key>
 		<data>
-		GWn63LXJVHGE6PVd2Xb0JRsLYUc=
+		f+v0Cz8PjXxVl5rKPHJWitLc6e8=
 		</data>
 		<key>__preview.dylib</key>
 		<data>
@@ -23,11 +27,18 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eUSDPckk7vgJXFkVzGNLmmaFe7Ix8yiktvpZuCea4JQ=
+			</data>
+		</dict>
 		<key>RingABull.debug.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P917DkviLSFERBXlzAQ7q/0QFWqi+f92XaWcZ1n87q0=
+			TawOk7ct+2f2kthbzj/tvPYSvQAScb4qNNIJIfE1qZ8=
 			</data>
 		</dict>
 		<key>__preview.dylib</key>

@@ -1,0 +1,16 @@
+{
+  "source": "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GameView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "End Game",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 66
+        }
+      }
+    ]
+  },
+  "version": 1
+}
