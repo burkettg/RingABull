@@ -11,6 +11,11 @@ import SwiftUI          //Import the SwiftUI library/framework
 //Create a struct for the GameView
 struct GameView: View {
     
+    //Need to create a few variables for the physics world
+    @State private var angle: Double = 0            //Angle for the swing motion
+    @State private var swingDirection: Double = 1   //Control the direction of the Swing
+    @State private var isSwinging: Bool = false     //Know if the swing is active or not
+    
     //Here I will create a new variable of a Environment wrapper to dismiss my views when needed.
     @Environment(\.dismiss) var dismiss
     
@@ -27,6 +32,31 @@ struct GameView: View {
             //Create a VStack to hold my screens objects... in a way
             VStack {
                 Spacer()
+                
+                //Need to draw the rope... A simple line will work for now.
+                Path { path in
+                    path.move(to: CGPoint(x: UIScreen.main.bounds.width / 2, y: 100))
+                    path.addLine(to: CGPoint(x: UIScreen.main.bounds.width / 2, y: 250))
+                }
+                .stroke(Color.brown, lineWidth: 4)
+                
+                //Now I need to create the ring that attaches to the rope
+                Circle()
+                    .frame(width: 60, height: 60)
+                    .foregroundStyle(.gray)
+                    .rotationEffect(.degrees(angle))    //Rotate the ring as it swings
+                    .offset(x: angle == 0 ? 0: CGFloat(angle * 2))
+                    .gesture(DragGesture()
+                        .onEnded({ value in
+                            withAnimation(.easeInOut(duration: 1)) {
+                                isSwinging.toggle()
+                                swingDirection *= -1
+                                startSwinging()
+                            }
+                            }))
+                
+                Spacer()
+                
                 //Define a button
                 Button(action: {
                     
@@ -47,9 +77,25 @@ struct GameView: View {
             }
             
         }
+        
+    }
+    
+    func startSwinging(){
+        if isSwinging {
+            withAnimation(.easeInOut(duration: 0.6).repeatForever(autoreverses: true)){
+                angle = swingDirection * 60        //Swing back and forth between -30 and 30 degrees
+            }
+        }
+        else{
+            withAnimation(.easeInOut(duration: 1)){
+                angle = 0       //Stop swinging
+            }
+        }
     }
 }
 
-#Preview {
-    GameView()
+struct GameView_Previews: PreviewProvider {
+    static var previews: some View {
+        GameView()
+    }
 }
