@@ -10,6 +10,7 @@ import SceneKit
 import UIKit
 
 struct PhysicsWorldView_Level04: UIViewRepresentable {
+    let rr = RopeAndRing()
     
     func makeUIView(context: Context) -> SCNView {
         let sceneView = SCNView()
@@ -31,40 +32,6 @@ struct PhysicsWorldView_Level04: UIViewRepresentable {
         return scene
     }
     
-
-
-    func addFirstSegment(to scene: SCNScene, hangingFrom anchorPosition: SCNVector3) {
-        // Create the first rope segment (cylinder)
-        let ropeSegmentHeight: CGFloat = 1.5  // Height of the rope segment
-        let ropeRadius: CGFloat = 0.05  // Radius of the rope segment
-        let ropeSegment = SCNCylinder(radius: ropeRadius, height: ropeSegmentHeight)
-        let ropeSegmentNode = SCNNode(geometry: ropeSegment)
-
-        // Give the rope segment a green color for visibility
-        let blueMaterial = SCNMaterial()
-        blueMaterial.diffuse.contents = UIColor.blue
-        ropeSegment.materials = [blueMaterial]
-
-        // Position the rope segment directly below the beam (avoiding any overlap)
-        let yPos = anchorPosition.y - Float(ropeSegmentHeight)  // Clearly below the beam
-        ropeSegmentNode.position = SCNVector3(anchorPosition.x, yPos, anchorPosition.z)
-
-        // Add a dynamic physics body to the rope segment to allow it to fall due to gravity
-        ropeSegmentNode.physicsBody = SCNPhysicsBody.dynamic()
-        ropeSegmentNode.physicsBody?.mass = 0.05  // Lightweight
-        ropeSegmentNode.physicsBody?.isAffectedByGravity = true  // Ensure gravity affects it
-
-        // Log the rope segment details
-        print("Added green rope segment at position: \(ropeSegmentNode.position) with physics body.")
-
-        // Add the rope segment to the scene
-        scene.rootNode.addChildNode(ropeSegmentNode)
-
-        // No joint for now — we just want to observe how the segment behaves with gravity
-    }
-
-
-
 
     
     func addRoom(to scene: SCNScene) {
@@ -143,13 +110,8 @@ struct PhysicsWorldView_Level04: UIViewRepresentable {
             scene.rootNode.addChildNode(beamNode)
 
         // Add the first rope segment attached to the beam's center
-            addFirstSegment(to: scene, hangingFrom: beamNode.position)
+        rr.addRopeAndRing_Level02(to: scene, hangingFrom: beamNode.position)
         
-            // Now add the first rope segment attached to the beam's center
-        //addRopeAndJoint(to: scene, hangingFrom: beamNode.position)
-        
-        // Hang the rope from the beam
-        //addRopeAndRing(to: scene, hangingFrom: beamNode.position)  // Call addRopeAndRing after room setup
         
         // Add a light to the scene for better visibility
             let light = SCNLight()
@@ -176,77 +138,6 @@ struct PhysicsWorldView_Level04: UIViewRepresentable {
     
 
     
-
-    
-
-
-
-
-    func addRopeAndRing(to scene: SCNScene, hangingFrom anchorPosition: SCNVector3) {
-        // Create the static node for the anchor (beam)
-        let anchorNode = SCNNode()
-        anchorNode.position = anchorPosition
-        anchorNode.physicsBody = SCNPhysicsBody.static()  // Static physics body for the beam
-        scene.rootNode.addChildNode(anchorNode)
-        
-        // Define rope properties
-        let ropeSegmentCount = 12
-        let ropeSegmentHeight: CGFloat = 0.4  // Height of each segment
-        let ropeRadius: CGFloat = 0.05  // Thin twine-style rope
-        
-        // Track the previous node (starting with the anchor node)
-        var previousNode: SCNNode = anchorNode
-        
-        for i in 0..<ropeSegmentCount {
-            // Create a cylinder for each rope segment
-            let ropeSegment = SCNCylinder(radius: ropeRadius, height: ropeSegmentHeight)
-            let ropeSegmentNode = SCNNode(geometry: ropeSegment)
-            
-            // Position each segment directly below the previous one
-            let yPos = anchorPosition.y - (Float(i + 1) * Float(ropeSegmentHeight))  // Stacking down from the beam
-            ropeSegmentNode.position = SCNVector3(anchorPosition.x, yPos, anchorPosition.z)
-            
-            // Assign a dynamic physics body to the rope segment
-            ropeSegmentNode.physicsBody = SCNPhysicsBody.dynamic()
-            ropeSegmentNode.physicsBody?.mass = 0.05  // Light mass for the segments
-            
-            // Add the rope segment to the scene
-            scene.rootNode.addChildNode(ropeSegmentNode)
-            
-            // Create a ball-socket joint between the current segment and the previous one
-            let joint = SCNPhysicsBallSocketJoint(bodyA: previousNode.physicsBody!,
-                                                  anchorA: previousNode.position,
-                                                  bodyB: ropeSegmentNode.physicsBody!,
-                                                  anchorB: ropeSegmentNode.position)
-            scene.physicsWorld.addBehavior(joint)
-            
-            // Move to the next segment
-            previousNode = ropeSegmentNode
-        }
-        
-        // Now create the metal ring at the bottom of the rope
-        let ring = SCNTorus(ringRadius: 0.5, pipeRadius: 0.1)
-        let ringNode = SCNNode(geometry: ring)
-        
-        // Position the ring at the bottom of the last rope segment
-        let lastYPosition = anchorPosition.y - (Float(ropeSegmentCount + 1) * Float(ropeSegmentHeight))
-        ringNode.position = SCNVector3(anchorPosition.x, lastYPosition, anchorPosition.z)
-        
-        // Add a dynamic physics body to the ring
-        ringNode.physicsBody = SCNPhysicsBody.dynamic()
-        ringNode.physicsBody?.mass = 1.0  // Heavier mass for the metal ring
-        
-        // Attach the ring to the last segment with a ball-socket joint
-        let ringJoint = SCNPhysicsBallSocketJoint(bodyA: previousNode.physicsBody!,
-                                                  anchorA: previousNode.position,
-                                                  bodyB: ringNode.physicsBody!,
-                                                  anchorB: ringNode.position)
-        scene.physicsWorld.addBehavior(ringJoint)
-        
-        // Add the ring to the scene
-        scene.rootNode.addChildNode(ringNode)
-        
-    } // End Adding rope and ring.
 
 } // End struct
 

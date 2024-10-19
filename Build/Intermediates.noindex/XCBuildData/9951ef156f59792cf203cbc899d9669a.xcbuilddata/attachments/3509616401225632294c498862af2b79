@@ -1,0 +1,148 @@
+{
+  "" : {
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABull-master.dia",
+    "emit-module-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABull-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABull-master-emit-module.dia",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABull-master.swiftdeps"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/ContentView.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/ContentView.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/ContentView.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/ContentView.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/ContentView~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GameLevels/PhysicsWorldView_Level01.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level01.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level01.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level01.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level01.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level01.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level01.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level01.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level01~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GameLevels/PhysicsWorldView_Level02.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level02.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level02.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level02.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level02.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level02.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level02.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level02.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level02~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GameLevels/PhysicsWorldView_Level03.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level03.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level03.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level03.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level03.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level03.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level03.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level03.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level03~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GameLevels/PhysicsWorldView_Level04.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level04.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level04.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level04.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level04.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level04.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level04.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level04.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level04~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GameLevels/PhysicsWorldView_Level05.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level05.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level05.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level05.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level05.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level05.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level05.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level05.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldView_Level05~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GamePlayLogic/HandleRingGesture.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/HandleRingGesture.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/HandleRingGesture.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/HandleRingGesture.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/HandleRingGesture.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/HandleRingGesture.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/HandleRingGesture.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/HandleRingGesture.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/HandleRingGesture~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GameView.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Physical Objects/JointSegment.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/JointSegment.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/JointSegment.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/JointSegment.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/JointSegment.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/JointSegment.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/JointSegment.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/JointSegment.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/JointSegment~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Physical Objects/Rope.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Rope.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Rope.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Rope.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Rope.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Rope.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Rope.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Rope.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Rope~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Physical Objects/RopeSegment.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeSegment.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeSegment.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeSegment.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeSegment.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeSegment.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeSegment.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeSegment.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeSegment~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/PhysicsWorldContainerView.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/RingABullApp.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABullApp.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABullApp.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABullApp.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABullApp.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABullApp.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABullApp.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABullApp.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RingABullApp~partial.swiftmodule"
+  }
+}
