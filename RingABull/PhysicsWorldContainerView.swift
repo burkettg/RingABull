@@ -28,15 +28,19 @@ struct PhysicsWorldContainerView: View {
                 dismiss()  // Dismiss the full-screen cover
             }) {
                 Text("Home from Level \(currentGameLevel)")
-                    .font(.title)
-                    .frame(maxWidth: .infinity)
+                    .font(.subheadline)
+                    .frame(width: 200)
                     .frame(height: 45)
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .padding([.leading, .trailing])
             }
-        }
+            
+            Spacer()
+                .frame(height: 20)
+            
+        } // End VStack
         .edgesIgnoringSafeArea(.bottom)
     }
 }
