@@ -11,8 +11,14 @@ import UIKit
 
 // Struct for Rope Segment
 struct RopeAndRing {
-
-    func addRopeAndRing_Level02(to scene: SCNScene, hangingFrom anchorPosition: SCNVector3) {
+    var level: Int
+    
+    // Custom initializer the level parameter
+        init(level: Int) {
+            self.level = level
+        }
+    
+    func addRopeAndRing(to scene: SCNScene, hangingFrom anchorPosition: SCNVector3) {
         // Create the static node for the anchor (beam)
         let anchorNode = SCNNode()
         anchorNode.position = anchorPosition
@@ -33,9 +39,17 @@ struct RopeAndRing {
             let ropeSegmentNode = SCNNode(geometry: ropeSegment)
             
             // Give the rope segment a green color for visibility
-            let greenMaterial = SCNMaterial()
-            greenMaterial.diffuse.contents = UIColor.green
-            ropeSegment.materials = [greenMaterial]
+            let ropeMaterial = SCNMaterial()
+            ropeMaterial.diffuse.contents =
+                                            switch level {
+                                            case 1: UIColor.green
+                                            case 2: UIColor.red
+                                            case 3: UIColor.blue
+                                            case 4: UIColor.gray
+                                            case 5: UIColor.yellow
+                                            default: UIColor.green
+                                            }
+            ropeSegment.materials = [ropeMaterial]
 
             // Position each segment directly below the previous one
             let yPos = anchorPosition.y - (Float(i + 1) * Float(ropeSegmentHeight))
@@ -63,6 +77,16 @@ struct RopeAndRing {
         // Now create the metal ring at the bottom of the rope
         let ring = SCNTorus(ringRadius: 0.5, pipeRadius: 0.1)
         let ringNode = SCNNode(geometry: ring)
+        
+        ring.firstMaterial!.diffuse.contents =
+                                                switch level {
+                                                case 1: UIColor.red
+                                                case 2: UIColor.purple
+                                                case 3: UIColor.yellow
+                                                case 4: UIColor.green
+                                                case 5: UIColor.red
+                                                default: UIColor.blue
+                                                }
 
         // Apply a 90-degree (π/2 radians) rotation to the ring so it hangs vertically
         ringNode.eulerAngles.x = Float.pi / 2  // Rotate the ring around the X-axis
