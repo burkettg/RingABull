@@ -30,7 +30,7 @@ struct Room {
         floorNode.physicsBody = SCNPhysicsBody.static()  // Static physics body for the floor
         floor.firstMaterial?.diffuse.contents =
                                                 switch level {
-                                                case 1: UIColor.brown
+                                                case 1: UIImage(named: "dirtFloor")
                                                 case 2: UIColor.blue
                                                 case 3: UIColor.green
                                                 case 4: UIColor.red
@@ -47,7 +47,16 @@ struct Room {
         let wallDepth: CGFloat = 0.2  // Thickness of the walls
 
         let backWall = SCNBox(width: wallWidth, height: wallHeight, length: wallDepth, chamferRadius: 0)
-        backWall.materials = [woodMaterial]
+        //backWall.materials = [woodMaterial]
+        backWall.firstMaterial?.diffuse.contents =
+                                                switch level {
+                                                case 1: UIImage(named: "tilesAqua")
+                                                case 2: UIImage(named: "dirtFloor")
+                                                case 3: UIColor.green
+                                                case 4: UIColor.red
+                                                case 5: UIColor.orange
+                                                default: UIColor.brown
+                                                }
         let backWallNode = SCNNode(geometry: backWall)
         backWallNode.position = SCNVector3(0, wallHeight / 2, -wallWidth / 2)  // Position back wall
         backWallNode.physicsBody = SCNPhysicsBody.static()

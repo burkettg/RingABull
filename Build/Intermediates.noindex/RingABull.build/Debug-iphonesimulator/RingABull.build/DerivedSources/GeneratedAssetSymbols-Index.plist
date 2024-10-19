@@ -26,6 +26,26 @@
 			<key>swiftSymbol</key>
 			<string>gameMode00</string>
 		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameDirtFloor</string>
+			<key>relativePath</key>
+			<string>./dirtFloor.imageset</string>
+			<key>swiftSymbol</key>
+			<string>dirtFloor</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameTilesAqua</string>
+			<key>relativePath</key>
+			<string>./tilesAqua.imageset</string>
+			<key>swiftSymbol</key>
+			<string>tilesAqua</string>
+		</dict>
 	</array>
 	<key>symbols</key>
 	<array/>

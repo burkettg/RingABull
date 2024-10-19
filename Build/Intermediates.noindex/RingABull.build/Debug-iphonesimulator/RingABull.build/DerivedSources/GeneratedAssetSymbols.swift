@@ -37,6 +37,12 @@ extension DeveloperToolsSupport.ImageResource {
     /// The "GameMode00" asset catalog image resource.
     static let gameMode00 = DeveloperToolsSupport.ImageResource(name: "GameMode00", bundle: resourceBundle)
 
+    /// The "dirtFloor" asset catalog image resource.
+    static let dirtFloor = DeveloperToolsSupport.ImageResource(name: "dirtFloor", bundle: resourceBundle)
+
+    /// The "tilesAqua" asset catalog image resource.
+    static let tilesAqua = DeveloperToolsSupport.ImageResource(name: "tilesAqua", bundle: resourceBundle)
+
 }
 
 // MARK: - Color Symbol Extensions -
@@ -94,6 +100,24 @@ extension AppKit.NSImage {
 #endif
     }
 
+    /// The "dirtFloor" asset catalog image.
+    static var dirtFloor: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .dirtFloor)
+#else
+        .init()
+#endif
+    }
+
+    /// The "tilesAqua" asset catalog image.
+    static var tilesAqua: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .tilesAqua)
+#else
+        .init()
+#endif
+    }
+
 }
 #endif
 
@@ -115,6 +139,24 @@ extension UIKit.UIImage {
     static var gameMode00: UIKit.UIImage {
 #if !os(watchOS)
         .init(resource: .gameMode00)
+#else
+        .init()
+#endif
+    }
+
+    /// The "dirtFloor" asset catalog image.
+    static var dirtFloor: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .dirtFloor)
+#else
+        .init()
+#endif
+    }
+
+    /// The "tilesAqua" asset catalog image.
+    static var tilesAqua: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .tilesAqua)
 #else
         .init()
 #endif
