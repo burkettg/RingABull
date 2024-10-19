@@ -76,7 +76,7 @@ struct PhysicsWorldView_Level03: UIViewRepresentable {
         let floorNode = SCNNode(geometry: floor)
         floorNode.position = SCNVector3(0, 0, 0)  // Position the floor at ground level (y = 0)
         floorNode.physicsBody = SCNPhysicsBody.static()  // Static physics body for the floor
-        floor.firstMaterial?.diffuse.contents = UIColor.brown  // Brown color for the floor
+        floor.firstMaterial?.diffuse.contents = UIColor.blue  // Brown color for the floor
         scene.rootNode.addChildNode(floorNode)
 
         print("Added a static floor at position \(floorNode.position).")
@@ -96,7 +96,7 @@ struct PhysicsWorldView_Level03: UIViewRepresentable {
         // Add a target to the back wall (a simple red sphere)
         let target = SCNSphere(radius: 0.3)
         let targetMaterial = SCNMaterial()
-        targetMaterial.diffuse.contents = UIColor.red
+        targetMaterial.diffuse.contents = UIColor.purple
         target.materials = [targetMaterial]
         let targetNode = SCNNode(geometry: target)
         targetNode.position = SCNVector3(0, wallHeight / 2, -wallWidth / 2 + 0.2)  // Slightly in front of wall

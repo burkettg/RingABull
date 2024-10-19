@@ -12,10 +12,18 @@
       },
       {
         "comment": "",
+        "key": "Current Level: %lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 107
+        }
+      },
+      {
+        "comment": "",
         "key": "Start Game",
         "location": {
           "startingColumn": 30,
-          "startingLine": 55
+          "startingLine": 57
         }
       },
       {
@@ -23,7 +31,7 @@
         "key": "Take a Swing",
         "location": {
           "startingColumn": 30,
-          "startingLine": 68
+          "startingLine": 70
         }
       },
       {
@@ -31,7 +39,7 @@
         "key": "Cancel",
         "location": {
           "startingColumn": 32,
-          "startingLine": 81
+          "startingLine": 83
         }
       },
       {
@@ -39,7 +47,7 @@
         "key": "Level_05",
         "location": {
           "startingColumn": 32,
-          "startingLine": 82
+          "startingLine": 84
         }
       },
       {
@@ -47,7 +55,7 @@
         "key": "Level_04",
         "location": {
           "startingColumn": 32,
-          "startingLine": 83
+          "startingLine": 85
         }
       },
       {
@@ -55,7 +63,7 @@
         "key": "Level_03",
         "location": {
           "startingColumn": 32,
-          "startingLine": 84
+          "startingLine": 86
         }
       },
       {
@@ -63,7 +71,7 @@
         "key": "Level_02",
         "location": {
           "startingColumn": 32,
-          "startingLine": 85
+          "startingLine": 87
         }
       },
       {
@@ -71,7 +79,7 @@
         "key": "Level_01",
         "location": {
           "startingColumn": 32,
-          "startingLine": 86
+          "startingLine": 88
         }
       },
       {
@@ -79,7 +87,7 @@
         "key": "Set Level",
         "location": {
           "startingColumn": 30,
-          "startingLine": 88
+          "startingLine": 90
         }
       }
     ]

@@ -48,6 +48,8 @@ struct ContentView: View {
                 //Need to create a vertical stack for the buttons to our home screen.
                 VStack{
                     
+                    Spacer()
+                    
                     //Define a button that will trigger the game play
                     Button(action: {
                         isGameActive = true     //Set the isGameActive flag to true
@@ -100,8 +102,23 @@ struct ContentView: View {
                             .stroke(.black, lineWidth: 2)
                     )
                     
+                    Spacer()
                     
+                    Text("Current Level: \(currentGameLevel)")
+                        .font(.title3)      //Define the font of the button
+                        .padding(10)        //Add some padding around the button
+                        .frame(width: 200, height: 50)      //Add a frame with dimensions
+                        .background(Color.white)             //Define a background color
+                        .foregroundColor(.black)            //Define a foreground color
+                        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                        .buttonStyle(.borderless)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(.black, lineWidth: 2)
+                        )
                     
+                    Spacer()
+                        .frame(height: 20)
                     
                 } // End VStack.
                 

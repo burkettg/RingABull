@@ -42,9 +42,9 @@ struct PhysicsWorldView_Level05: UIViewRepresentable {
         let ropeSegmentNode = SCNNode(geometry: ropeSegment)
 
         // Give the rope segment a green color for visibility
-        let greenMaterial = SCNMaterial()
-        greenMaterial.diffuse.contents = UIColor.green
-        ropeSegment.materials = [greenMaterial]
+        let orangeMaterial = SCNMaterial()
+        orangeMaterial.diffuse.contents = UIColor.orange
+        ropeSegment.materials = [orangeMaterial]
 
         // Position the rope segment directly below the beam (avoiding any overlap)
         let yPos = anchorPosition.y - Float(ropeSegmentHeight)  // Clearly below the beam
@@ -97,7 +97,7 @@ struct PhysicsWorldView_Level05: UIViewRepresentable {
         // Add a target to the back wall (a simple red sphere)
         let target = SCNSphere(radius: 0.3)
         let targetMaterial = SCNMaterial()
-        targetMaterial.diffuse.contents = UIColor.red
+        targetMaterial.diffuse.contents = UIColor.darkGray
         target.materials = [targetMaterial]
         let targetNode = SCNNode(geometry: target)
         targetNode.position = SCNVector3(0, wallHeight / 2, -wallWidth / 2 + 0.2)  // Slightly in front of wall
@@ -137,9 +137,9 @@ struct PhysicsWorldView_Level05: UIViewRepresentable {
             beamNode.name = "beam"  // Name the beam so we can reference it later
             
         // Color the beam red for visibility
-            let redMaterial = SCNMaterial()
-            redMaterial.diffuse.contents = UIColor.red
-            beam.materials = [redMaterial]
+            let orangeMaterial = SCNMaterial()
+            orangeMaterial.diffuse.contents = UIColor.orange
+            beam.materials = [orangeMaterial]
             
             scene.rootNode.addChildNode(beamNode)
 
