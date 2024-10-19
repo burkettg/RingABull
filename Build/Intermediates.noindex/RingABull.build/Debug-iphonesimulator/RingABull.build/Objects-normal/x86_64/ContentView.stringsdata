@@ -7,7 +7,7 @@
         "key": "Wlcome to Ring-A-Bull!",
         "location": {
           "startingColumn": 26,
-          "startingLine": 34
+          "startingLine": 36
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Start Game",
         "location": {
           "startingColumn": 30,
-          "startingLine": 53
+          "startingLine": 55
         }
       },
       {
@@ -23,15 +23,63 @@
         "key": "Take a Swing",
         "location": {
           "startingColumn": 30,
-          "startingLine": 66
+          "startingLine": 68
         }
       },
       {
         "comment": "",
-        "key": "SET LEVEL",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 81
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_05",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_04",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_03",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_02",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 85
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_01",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "Set Level",
         "location": {
           "startingColumn": 30,
-          "startingLine": 79
+          "startingLine": 88
         }
       }
     ]

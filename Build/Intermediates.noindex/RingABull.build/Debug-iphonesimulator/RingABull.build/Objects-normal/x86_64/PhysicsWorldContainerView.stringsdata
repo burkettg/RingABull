@@ -4,10 +4,10 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Go Home",
+        "key": "Home from Level %lld",
         "location": {
           "startingColumn": 22,
-          "startingLine": 28
+          "startingLine": 30
         }
       }
     ]

@@ -9,7 +9,9 @@ import SwiftUI
 struct PhysicsWorldContainerView: View {
     @Environment(\.dismiss) var dismiss  // For dismissing the full-screen view
     let currentWorldView: AnyView  // Inject the specific PhysicsWorldView here
-
+    // Set and retain current game level.
+    @AppStorage("currentLevel") var currentGameLevel: Int = 1
+    
     var body: some View {
         VStack {
             // SceneKit view using GeometryReader to adjust its size
@@ -25,7 +27,7 @@ struct PhysicsWorldContainerView: View {
             Button(action: {
                 dismiss()  // Dismiss the full-screen cover
             }) {
-                Text("Go Home")
+                Text("Home from Level \(currentGameLevel)")
                     .font(.title)
                     .frame(maxWidth: .infinity)
                     .frame(height: 45)

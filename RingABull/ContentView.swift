@@ -13,7 +13,9 @@ import SwiftUI      //Import SwifUI framework - this is used to build user inter
 struct ContentView: View {
     @State private var isGameActive = false     //State control of the game... is game play active.
     @State private var showingPhysicsWorld = false
-    @State private var currentWorld = 1
+    //@State private var currentWorld = 2
+    // Set and retain current game level.
+    @AppStorage("currentLevel") var currentGameLevel: Int = 1
     
     //Here is the main body of the contentView where elements of the UI are defined
     var body: some View {
@@ -72,18 +74,34 @@ struct ContentView: View {
                             .cornerRadius(10)               //Define the corner radius of the button
                     }
                     
-                    //Define a second button
-                    Button(action: {
-                        print("Settings!")      //Define the action of the button
-                    }){
-                        Text("SET LEVEL")       //Define the text that the button displays
-                            .font(.title2)      //Define the font of the button
-                            .padding(10)        //Add some padding around the button
-                            .frame(width: 150, height: 50)      //Add a frame with dimensions
-                            .background(Color.blue)             //Define a background color
-                            .foregroundColor(.white)            //Define a foreground color
-                            .cornerRadius(10)                   //Add the corner radius of the button
+                    
+                    
+                    
+                    Menu {
+                        Button("Cancel", action: { print("cancel") })
+                        Button("Level_05", action: { currentGameLevel = 5 })
+                        Button("Level_04", action: { currentGameLevel = 4 })
+                        Button("Level_03", action: { currentGameLevel = 3 })
+                        Button("Level_02", action: { currentGameLevel = 2 })
+                        Button("Level_01", action: { currentGameLevel = 1 })
+                    } label: {
+                        Text("Set Level")
                     }
+                    .font(.title2)      //Define the font of the button
+                    .padding(10)        //Add some padding around the button
+                    .frame(width: 150, height: 50)      //Add a frame with dimensions
+                    .background(Color.blue)             //Define a background color
+                    .foregroundColor(.white)            //Define a foreground color
+                    .cornerRadius(10)                   //Add the corner radius of the button
+                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                    .buttonStyle(.borderless)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(.black, lineWidth: 2)
+                    )
+                    
+                    
+                    
                     
                 } // End VStack.
                 
@@ -108,13 +126,17 @@ struct ContentView: View {
     
     // Function to return the current world based on progression
         func getCurrentWorldView() -> AnyView {
-            switch currentWorld {
+            switch currentGameLevel {
             case 1:
                 return AnyView(PhysicsWorldView_Level01())  // World 1
             case 2:
-                return AnyView(PhysicsWorldView_Level01())  // World 2
+                return AnyView(PhysicsWorldView_Level02())  // World 2
             case 3:
-                return AnyView(PhysicsWorldView_Level01())  // World 3
+                return AnyView(PhysicsWorldView_Level03())  // World 3
+            case 4:
+                return AnyView(PhysicsWorldView_Level04())  // World 4
+            case 5:
+                return AnyView(PhysicsWorldView_Level05())  // World 5
             default:
                 return AnyView(PhysicsWorldView_Level01())  // Default to World 1 if unknown
             }
