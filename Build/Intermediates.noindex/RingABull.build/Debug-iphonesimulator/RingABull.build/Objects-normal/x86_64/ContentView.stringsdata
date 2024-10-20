@@ -7,7 +7,7 @@
         "key": "Wlcome to Ring-A-Bull!",
         "location": {
           "startingColumn": 26,
-          "startingLine": 36
+          "startingLine": 40
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Current Level: %lld",
         "location": {
           "startingColumn": 26,
-          "startingLine": 107
+          "startingLine": 111
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "Start Game",
         "location": {
           "startingColumn": 30,
-          "startingLine": 57
+          "startingLine": 61
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "Take a Swing",
         "location": {
           "startingColumn": 30,
-          "startingLine": 70
+          "startingLine": 74
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "Cancel",
         "location": {
           "startingColumn": 32,
-          "startingLine": 83
+          "startingLine": 87
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "Level_05",
         "location": {
           "startingColumn": 32,
-          "startingLine": 84
+          "startingLine": 88
         }
       },
       {
@@ -55,7 +55,7 @@
         "key": "Level_04",
         "location": {
           "startingColumn": 32,
-          "startingLine": 85
+          "startingLine": 89
         }
       },
       {
@@ -63,7 +63,7 @@
         "key": "Level_03",
         "location": {
           "startingColumn": 32,
-          "startingLine": 86
+          "startingLine": 90
         }
       },
       {
@@ -71,7 +71,7 @@
         "key": "Level_02",
         "location": {
           "startingColumn": 32,
-          "startingLine": 87
+          "startingLine": 91
         }
       },
       {
@@ -79,7 +79,7 @@
         "key": "Level_01",
         "location": {
           "startingColumn": 32,
-          "startingLine": 88
+          "startingLine": 92
         }
       },
       {
@@ -87,7 +87,7 @@
         "key": "Set Level",
         "location": {
           "startingColumn": 30,
-          "startingLine": 90
+          "startingLine": 94
         }
       }
     ]

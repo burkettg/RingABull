@@ -311,6 +311,15 @@ SWIFT_CLASS("_TtC9RingABull11Coordinator")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class UITapGestureRecognizer;
+
+SWIFT_CLASS("_TtC9RingABull17CoordinatorButton")
+@interface CoordinatorButton : NSObject
+- (void)handleTap:(UITapGestureRecognizer * _Nonnull)gesture;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 
 

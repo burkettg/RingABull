@@ -4,10 +4,34 @@
     "Localizable": [
       {
         "comment": "",
+        "key": "Move Left/Right",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "Move Forward/Backward",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "Release Ring",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
         "key": "Home from Level %lld",
         "location": {
           "startingColumn": 22,
-          "startingLine": 30
+          "startingLine": 86
         }
       }
     ]

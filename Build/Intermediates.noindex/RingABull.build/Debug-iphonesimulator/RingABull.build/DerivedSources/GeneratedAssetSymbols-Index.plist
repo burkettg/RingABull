@@ -30,6 +30,36 @@
 			<key>catalogPath</key>
 			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
 			<key>objcSymbol</key>
+			<string>ACImageNameBostonFernImage</string>
+			<key>relativePath</key>
+			<string>./bostonFernImage.imageset</string>
+			<key>swiftSymbol</key>
+			<string>bostonFern</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameBricksWorn</string>
+			<key>relativePath</key>
+			<string>./bricksWorn.imageset</string>
+			<key>swiftSymbol</key>
+			<string>bricksWorn</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameDecorPot</string>
+			<key>relativePath</key>
+			<string>./decorPot.imageset</string>
+			<key>swiftSymbol</key>
+			<string>decorPot</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
 			<string>ACImageNameDirtFloor</string>
 			<key>relativePath</key>
 			<string>./dirtFloor.imageset</string>
@@ -40,11 +70,81 @@
 			<key>catalogPath</key>
 			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
 			<key>objcSymbol</key>
+			<string>ACImageNameMetalGrates</string>
+			<key>relativePath</key>
+			<string>./metalGrates.imageset</string>
+			<key>swiftSymbol</key>
+			<string>metalGrates</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameMetalRusty</string>
+			<key>relativePath</key>
+			<string>./metalRusty.imageset</string>
+			<key>swiftSymbol</key>
+			<string>metalRusty</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNamePlanksDark</string>
+			<key>relativePath</key>
+			<string>./planksDark.imageset</string>
+			<key>swiftSymbol</key>
+			<string>planksDark</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNamePlanksGray</string>
+			<key>relativePath</key>
+			<string>./planksGray.imageset</string>
+			<key>swiftSymbol</key>
+			<string>planksGray</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameShutterRusted</string>
+			<key>relativePath</key>
+			<string>./shutterRusted.imageset</string>
+			<key>swiftSymbol</key>
+			<string>shutterRusted</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
 			<string>ACImageNameTilesAqua</string>
 			<key>relativePath</key>
 			<string>./tilesAqua.imageset</string>
 			<key>swiftSymbol</key>
 			<string>tilesAqua</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameWoodWeathered</string>
+			<key>relativePath</key>
+			<string>./woodWeathered.imageset</string>
+			<key>swiftSymbol</key>
+			<string>woodWeathered</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameWoodWorn</string>
+			<key>relativePath</key>
+			<string>./woodWorn.imageset</string>
+			<key>swiftSymbol</key>
+			<string>woodWorn</string>
 		</dict>
 	</array>
 	<key>symbols</key>

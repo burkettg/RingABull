@@ -17,6 +17,10 @@ struct ContentView: View {
     // Set and retain current game level.
     @AppStorage("currentLevel") var currentGameLevel: Int = 1
     
+    // Get ring position for control sliders.
+    @State private var xPosition: Float = 0
+    @State private var zPosition: Float = 0
+    
     //Here is the main body of the contentView where elements of the UI are defined
     var body: some View {
         NavigationView{
@@ -147,7 +151,7 @@ struct ContentView: View {
             case 1:
                 return AnyView(PhysicsWorldView_Level01())  // World 1
             case 2:
-                return AnyView(PhysicsWorldView_Level02())  // World 2
+                return AnyView(PhysicsWorldView_Level02(xPosition: $xPosition, zPosition: $zPosition))  // World 2
             case 3:
                 return AnyView(PhysicsWorldView_Level03())  // World 3
             case 4:

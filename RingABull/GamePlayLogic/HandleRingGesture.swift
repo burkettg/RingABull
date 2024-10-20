@@ -10,7 +10,7 @@ import SceneKit
 
 struct HandleRingGesture: View {
     var body: some View {
-        PhysicsWorldView_Level02()  // This now uses your SceneKit UIViewRepresentable
+        PhysicsWorldView_Level01()  // This now uses your SceneKit UIViewRepresentable
             .gesture(DragGesture()
                 .onChanged { value in
                     handleDragChanged(value: value)
