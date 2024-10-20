@@ -17,9 +17,14 @@ struct PhysicsWorldView_Level01: UIViewRepresentable {
         let sceneView = SCNView()
         sceneView.scene = createScene()
         
-        sceneView.allowsCameraControl = true
+        sceneView.allowsCameraControl = false
         sceneView.autoenablesDefaultLighting = true
         sceneView.backgroundColor = UIColor.blue
+        
+        // Add Pan Gesture Recognizer to detect dragging
+        let panGesture = UIPanGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handlePan(_:)))
+        sceneView.addGestureRecognizer(panGesture)
+        
         return sceneView
     }
     
@@ -29,7 +34,7 @@ struct PhysicsWorldView_Level01: UIViewRepresentable {
         let scene = SCNScene()
         
         // Ensure gravity is applied to the scene
-        scene.physicsWorld.gravity = SCNVector3(0, -2.8, 0)  // Standard Earth gravity
+        scene.physicsWorld.gravity = SCNVector3(0, -4.8, 0)  // Standard Earth gravity
         
         // Add the room (walls, floor, ceiling)
         room.addRoom(to: scene)
@@ -38,6 +43,12 @@ struct PhysicsWorldView_Level01: UIViewRepresentable {
         
         return scene
     }
+    
+    // MARK: Coordinator for gesture handling
+       func makeCoordinator() -> Coordinator {
+           return Coordinator(self)
+       }
+    
     
     
 

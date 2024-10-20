@@ -98,6 +98,7 @@ struct RopeAndRing {
         // Add a dynamic physics body to the ring
         ringNode.physicsBody = SCNPhysicsBody.dynamic()
         ringNode.physicsBody?.mass = 1.0  // Heavier mass for the metal ring
+        ringNode.physicsBody?.isAffectedByGravity = true
 
         // Corrected attachment point: Top of the ring's outer edge
         let ringTopAttachmentPoint = SCNVector3(0, 0, Float(ring.ringRadius + ring.pipeRadius))

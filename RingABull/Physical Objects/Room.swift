@@ -82,14 +82,32 @@ struct Room {
 
         // Add left and right walls (similarly to the back wall)
         let leftWall = SCNBox(width: wallDepth, height: wallHeight, length: wallWidth, chamferRadius: 0)
-        leftWall.materials = [woodMaterial]
+        //leftWall.materials = [woodMaterial]
+        leftWall.firstMaterial?.diffuse.contents =
+                                                switch level {
+                                                case 1: UIImage(named: "tilesAqua")
+                                                case 2: UIImage(named: "dirtFloor")
+                                                case 3: UIColor.green
+                                                case 4: UIColor.red
+                                                case 5: UIColor.orange
+                                                default: UIColor.brown
+                                                }
         let leftWallNode = SCNNode(geometry: leftWall)
         leftWallNode.position = SCNVector3(-wallWidth / 2, wallHeight / 2, 0)
         leftWallNode.physicsBody = SCNPhysicsBody.static()
         scene.rootNode.addChildNode(leftWallNode)
 
         let rightWall = SCNBox(width: wallDepth, height: wallHeight, length: wallWidth, chamferRadius: 0)
-        rightWall.materials = [woodMaterial]
+        //rightWall.materials = [woodMaterial]
+        rightWall.firstMaterial?.diffuse.contents =
+                                                switch level {
+                                                case 1: UIImage(named: "tilesAqua")
+                                                case 2: UIImage(named: "dirtFloor")
+                                                case 3: UIColor.green
+                                                case 4: UIColor.red
+                                                case 5: UIColor.orange
+                                                default: UIColor.brown
+                                                }
         let rightWallNode = SCNNode(geometry: rightWall)
         rightWallNode.position = SCNVector3(wallWidth / 2, wallHeight / 2, 0)
         rightWallNode.physicsBody = SCNPhysicsBody.static()
