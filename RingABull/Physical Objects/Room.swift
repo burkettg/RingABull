@@ -12,14 +12,13 @@ import UIKit
 struct Room {
     var level: Int
     var rr = RopeAndRing(level: 1)
-    
     // Custom initializer the level parameter
-        init(level: Int) {
-            self.level = level
-            rr.level = level
-        }
+    init(level: Int) {
+        self.level = level
+        rr.level = level
+    }
     
-    func addRoom(to scene: SCNScene) {
+    func addRoom(to scene: SCNScene, coordinator: PhysicsWorldCoordinator) -> SCNNode? {
         let woodMaterial = SCNMaterial()
         woodMaterial.diffuse.contents = UIImage(named: "wood_texture")  // Use a wood texture
         let beamThickness: CGFloat = 0.3
@@ -28,6 +27,7 @@ struct Room {
         let floorNode = SCNNode(geometry: floor)
         floorNode.position = SCNVector3(0, 0, 0)  // Position the floor at ground level (y = 0)
         floorNode.physicsBody = SCNPhysicsBody.static()  // Static physics body for the floor
+        //floor.materials = [woodMaterial]
         floor.firstMaterial?.diffuse.contents =
                                                 switch level {
                                                 case 1: UIImage(named: "dirtFloor")
@@ -39,15 +39,12 @@ struct Room {
                                                 }
         scene.rootNode.addChildNode(floorNode)
 
-        print("Added a static floor at position \(floorNode.position).")
-
         // Add back wall with target
         let wallWidth: CGFloat = 10.0
         let wallHeight: CGFloat = 8.0
         let wallDepth: CGFloat = 0.2  // Thickness of the walls
 
         let backWall = SCNBox(width: wallWidth, height: wallHeight, length: wallDepth, chamferRadius: 0)
-        //backWall.materials = [woodMaterial]
         backWall.firstMaterial?.diffuse.contents =
                                                 switch level {
                                                 case 1: UIImage(named: "tilesAqua")
@@ -82,7 +79,6 @@ struct Room {
 
         // Add left and right walls (similarly to the back wall)
         let leftWall = SCNBox(width: wallDepth, height: wallHeight, length: wallWidth, chamferRadius: 0)
-        //leftWall.materials = [woodMaterial]
         leftWall.firstMaterial?.diffuse.contents =
                                             switch level {
                                             case 1: UIImage(named: "tilesAqua")
@@ -98,7 +94,6 @@ struct Room {
         scene.rootNode.addChildNode(leftWallNode)
 
         let rightWall = SCNBox(width: wallDepth, height: wallHeight, length: wallWidth, chamferRadius: 0)
-        //rightWall.materials = [woodMaterial]
         rightWall.firstMaterial?.diffuse.contents =
                                             switch level {
                                             case 1: UIImage(named: "tilesAqua")
@@ -125,57 +120,48 @@ struct Room {
         let beamLength: CGFloat = 8.0
         
         let beam = SCNBox(width: beamLength, height: beamThickness, length: 0.3, chamferRadius: 0)
-            let beamNode = SCNNode(geometry: beam)
-            beamNode.position = SCNVector3(0, wallHeight - beamThickness / 2, 0)  // Beam's position
-            beamNode.physicsBody = SCNPhysicsBody.static()  // Beam is static
-            beamNode.name = "beam"  // Name the beam so we can reference it later
+        let beamNode = SCNNode(geometry: beam)
+        beamNode.position = SCNVector3(0, wallHeight - beamThickness / 2, 0)  // Beam's position
+        beamNode.physicsBody = SCNPhysicsBody.static()  // Beam is static
+        beamNode.name = "beam"  // Name the beam so we can reference it later
             
         // Color the beam red for visibility
-            let redMaterial = SCNMaterial()
-            redMaterial.diffuse.contents =
-                                            switch level {
-                                            case 1: UIColor.yellow
-                                            case 2: UIColor.brown
-                                            case 3: UIColor.blue
-                                            case 4: UIColor.green
-                                            case 5: UIColor.darkGray
-                                            default: UIColor.orange
-                                            }
-            beam.materials = [redMaterial]
-            
-            scene.rootNode.addChildNode(beamNode)
+        let redMaterial = SCNMaterial()
+        redMaterial.diffuse.contents =
+                                        switch level {
+                                        case 1: UIColor.yellow
+                                        case 2: UIColor.brown
+                                        case 3: UIColor.blue
+                                        case 4: UIColor.green
+                                        case 5: UIColor.darkGray
+                                        default: UIColor.orange
+                                        }
+        beam.materials = [redMaterial]
+        
+        scene.rootNode.addChildNode(beamNode)
 
-        
-        // Hang the rope from the beam
-        rr.addRopeAndRing(to: scene, hangingFrom: beamNode.position)
-        
         // Add a light to the scene for better visibility
-            let light = SCNLight()
-            light.type = .omni
-            let lightNode = SCNNode()
-            lightNode.light = light
-            lightNode.position = SCNVector3(0, wallHeight, 10)  // Position the light above and in front
-            scene.rootNode.addChildNode(lightNode)
+        let light = SCNLight()
+        light.type = .omni
+        let lightNode = SCNNode()
+        lightNode.light = light
+        lightNode.position = SCNVector3(0, wallHeight, 10)  // Position the light above and in front
+        scene.rootNode.addChildNode(lightNode)
 
-            // Add a camera to ensure the scene is visible
-            let cameraNode = SCNNode()
-            cameraNode.camera = SCNCamera()
-            cameraNode.position = SCNVector3(0, wallHeight / 2, 15)  // Move the camera to see the entire scene
-            scene.rootNode.addChildNode(cameraNode)
+        // Add a camera to ensure the scene is visible
+        let cameraNode = SCNNode()
+        cameraNode.camera = SCNCamera()
+        cameraNode.position = SCNVector3(0, wallHeight / 2, 15)  // Move the camera to see the entire scene
+        scene.rootNode.addChildNode(cameraNode)
         
         // Set the background color for better contrast
-            scene.background.contents = UIColor.gray  // Gray background to contrast with the green rope segment
-
+        scene.background.contents = UIColor.gray  // Gray background to contrast with the green rope segment
             
-        print("Gravity set to \(scene.physicsWorld.gravity)")
+        // Hang the rope from the beam
+        let ringNode = rr.addRopeAndRing(to: scene, hangingFrom: beamNode.position, coordinator: coordinator)
+        
+        return ringNode
         
     }
-    
-    
-    
-    
-    
-    
-    
     
 }

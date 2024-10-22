@@ -9,61 +9,61 @@ import SwiftUI
 import SceneKit
 import UIKit
 
-struct PhysicsWorldView_Level02: UIViewRepresentable {
 
+struct PhysicsWorldView_Level02: UIViewRepresentable {
     @Binding var xPosition: Float
     @Binding var zPosition: Float
     
-    
-    
     let room = Room(level: 2)
-    
+    var coordinator: PhysicsWorldCoordinator  // Accept coordinator from the parent view
+
     func makeUIView(context: Context) -> SCNView {
         let sceneView = SCNView()
-        sceneView.scene = createScene()
-        
+        sceneView.scene = createScene(context: context)
         sceneView.allowsCameraControl = false
         sceneView.autoenablesDefaultLighting = true
-        sceneView.backgroundColor = UIColor.blue
-        
-        // Add Tap Gesture Recognizer to select the ring
-        let tapGesture = UITapGestureRecognizer(target: context.coordinator, action: #selector(CoordinatorButton.handleTap(_:)))
-        sceneView.addGestureRecognizer(tapGesture)
+
+        // Debug print to ensure the scene is not nil
+        if sceneView.scene == nil {
+            print("Error: SceneView's scene is nil!")
+        } else {
+            print("SceneView's scene is initialized.")
+        }
         
         return sceneView
     }
     
-    // MARK: Coordinator for gesture handling
-    func makeCoordinator() -> CoordinatorButton {
-        return CoordinatorButton(self)
-    }
-    
     func updateUIView(_ uiView: SCNView, context: Context) {
-        // Move the selected ring node based on slider values
-        if let selectedNode = context.coordinator.selectedNode {
-            selectedNode.position.x = xPosition
-            selectedNode.position.z = zPosition
+        // Update the ring's position based on the slider values
+        if let ring = coordinator.ringNode {
+            // Disable physics while the ring is being moved manually
+            if let physicsBody = ring.physicsBody {
+                physicsBody.isAffectedByGravity = false
+                physicsBody.velocity = SCNVector3Zero  // Ensure there's no residual physics velocity
+            }
+            // Move the ring to the new slider position
+            ring.position.x = xPosition
+            ring.position.z = zPosition
         }
     }
     
-    func createScene() -> SCNScene {
+    func createScene(context: Context) -> SCNScene {
         let scene = SCNScene()
-        //let position = SCNVector3(0, 10, 0)
-        
-        // Add the room (walls, floor, ceiling)
-        room.addRoom(to: scene)
-        
-        // Ensure gravity is applied to the scene
-        scene.physicsWorld.gravity = SCNVector3(0, -4.8, 0)  // Standard Earth gravity
-        
+        // Apply gravity to the scene
+        scene.physicsWorld.gravity = SCNVector3(0, -9.8, 0)
+        // Add the room and rope/ring to the scene
+        if let ringNode = room.addRoom(to: scene, coordinator: coordinator) {
+            // Set the ringNode in the coordinator
+            coordinator.setRingNode(ringNode)
+            // Pass the scene to the coordinator
+            coordinator.setScene(scene)
+            
+        } else {
+            print("Error: ringNode could not be added to the scene.")
+        }
+
         return scene
     }
-    
-    
-    
-    
 
-
-} // End struct
-
+}
 

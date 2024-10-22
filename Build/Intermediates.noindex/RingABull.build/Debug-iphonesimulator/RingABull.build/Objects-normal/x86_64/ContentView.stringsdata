@@ -4,10 +4,10 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Wlcome to Ring-A-Bull!",
+        "key": "Welcome to Ring-A-Bull!",
         "location": {
           "startingColumn": 26,
-          "startingLine": 40
+          "startingLine": 38
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Current Level: %lld",
         "location": {
           "startingColumn": 26,
-          "startingLine": 111
+          "startingLine": 101
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "Start Game",
         "location": {
           "startingColumn": 30,
-          "startingLine": 61
+          "startingLine": 55
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "Take a Swing",
         "location": {
           "startingColumn": 30,
-          "startingLine": 74
+          "startingLine": 67
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "Cancel",
         "location": {
           "startingColumn": 32,
-          "startingLine": 87
+          "startingLine": 77
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "Level_05",
         "location": {
           "startingColumn": 32,
-          "startingLine": 88
+          "startingLine": 78
         }
       },
       {
@@ -55,7 +55,7 @@
         "key": "Level_04",
         "location": {
           "startingColumn": 32,
-          "startingLine": 89
+          "startingLine": 79
         }
       },
       {
@@ -63,7 +63,7 @@
         "key": "Level_03",
         "location": {
           "startingColumn": 32,
-          "startingLine": 90
+          "startingLine": 80
         }
       },
       {
@@ -71,7 +71,7 @@
         "key": "Level_02",
         "location": {
           "startingColumn": 32,
-          "startingLine": 91
+          "startingLine": 81
         }
       },
       {
@@ -79,7 +79,7 @@
         "key": "Level_01",
         "location": {
           "startingColumn": 32,
-          "startingLine": 92
+          "startingLine": 82
         }
       },
       {
@@ -87,7 +87,7 @@
         "key": "Set Level",
         "location": {
           "startingColumn": 30,
-          "startingLine": 94
+          "startingLine": 84
         }
       }
     ]

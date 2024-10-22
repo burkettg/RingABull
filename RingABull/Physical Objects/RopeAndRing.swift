@@ -10,26 +10,25 @@ import SceneKit
 import UIKit
 
 // Struct for Rope Segment
-struct RopeAndRing {
+class RopeAndRing {
     var level: Int
-    
+    var ropeSegments: [SCNNode] = []  // Store rope segments
     // Custom initializer the level parameter
-        init(level: Int) {
-            self.level = level
-        }
+    init(level: Int) {
+        self.level = level
+    }
     
-    func addRopeAndRing(to scene: SCNScene, hangingFrom anchorPosition: SCNVector3) {
+    func addRopeAndRing(to scene: SCNScene, hangingFrom anchorPosition: SCNVector3, coordinator: PhysicsWorldCoordinator) -> SCNNode {
         // Create the static node for the anchor (beam)
         let anchorNode = SCNNode()
         anchorNode.position = anchorPosition
         anchorNode.physicsBody = SCNPhysicsBody.static()  // Static physics body for the beam
         scene.rootNode.addChildNode(anchorNode)
-        
         // Define rope properties
         let ropeSegmentCount = 12
         let ropeSegmentHeight: CGFloat = 0.4  // Height of each segment
         let ropeRadius: CGFloat = 0.05  // Thin twine-style rope
-        
+            
         // Track the previous node (starting with the anchor node)
         var previousNode: SCNNode = anchorNode
         
@@ -56,7 +55,8 @@ struct RopeAndRing {
             ropeSegmentNode.position = SCNVector3(anchorPosition.x, yPos, anchorPosition.z)
             
             // Assign a dynamic physics body to the rope segment
-            ropeSegmentNode.physicsBody = SCNPhysicsBody.dynamic()
+            ropeSegmentNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
+            ropeSegmentNode.physicsBody?.isAffectedByGravity = true  // Disable gravity initially
             ropeSegmentNode.physicsBody?.mass = 0.05  // Light mass for the segments
             
             // Add the rope segment to the scene
@@ -72,35 +72,43 @@ struct RopeAndRing {
             
             // Move to the next segment
             previousNode = ropeSegmentNode
+            
+            // Add to the list of rope segments
+            ropeSegments.append(ropeSegmentNode)
+            
         }
+        
+        // After creating the rope segments, assign them to the coordinator
+        coordinator.setRopeSegments(ropeSegments)
         
         // Now create the metal ring at the bottom of the rope
         let ring = SCNTorus(ringRadius: 0.5, pipeRadius: 0.1)
-        let ringNode = SCNNode(geometry: ring)
+        let ringNode = SCNNode(geometry: SCNTorus(ringRadius: 0.5, pipeRadius: 0.1))
         
-        ring.firstMaterial!.diffuse.contents =
-                                                switch level {
-                                                case 1: UIColor.red
-                                                case 2: UIColor.purple
-                                                case 3: UIColor.yellow
-                                                case 4: UIColor.green
-                                                case 5: UIColor.red
-                                                default: UIColor.blue
-                                                }
+        let ringMaterial = SCNMaterial()
+        ringMaterial.diffuse.contents =
+                switch level {
+                case 1: UIColor.red
+                case 2: UIColor.purple
+                case 3: UIColor.yellow
+                case 4: UIColor.green
+                case 5: UIColor.red
+                default: UIColor.blue
+                }
+        ring.materials = [ringMaterial]
 
+        // Add a dynamic physics body to the ring
+        ringNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)  // Add dynamic physics body
+        
         // Apply a 90-degree (π/2 radians) rotation to the ring so it hangs vertically
         ringNode.eulerAngles.x = Float.pi / 2  // Rotate the ring around the X-axis
-
         // Position the ring at the bottom of the last rope segment
         let lastYPosition = anchorPosition.y - (Float(ropeSegmentCount + 1) * Float(ropeSegmentHeight))
         ringNode.position = SCNVector3(anchorPosition.x, lastYPosition, anchorPosition.z)
-
-        // Add a dynamic physics body to the ring
-        ringNode.physicsBody = SCNPhysicsBody.dynamic()
-        ringNode.physicsBody?.mass = 1.0  // Heavier mass for the metal ring
+                ringNode.physicsBody?.mass = 1.0  // Heavier mass for the metal ring
         ringNode.physicsBody?.isAffectedByGravity = true
+        ringNode.physicsBody?.allowsResting = true
         ringNode.name = "ringNode"
-
         // Corrected attachment point: Top of the ring's outer edge
         let ringTopAttachmentPoint = SCNVector3(0, 0, Float(ring.ringRadius + ring.pipeRadius))
 
@@ -110,11 +118,10 @@ struct RopeAndRing {
                                                   bodyB: ringNode.physicsBody!,  // Physics body of the ring
                                                   anchorB: ringTopAttachmentPoint)  // Top outer edge of the ring
         scene.physicsWorld.addBehavior(ringJoint)
-
-        
         // Add the ring to the scene
         scene.rootNode.addChildNode(ringNode)
         
+        return ringNode
         
     }// End Adding rope and ring.
     

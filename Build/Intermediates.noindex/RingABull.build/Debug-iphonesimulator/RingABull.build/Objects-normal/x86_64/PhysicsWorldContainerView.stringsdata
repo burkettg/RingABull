@@ -7,7 +7,7 @@
         "key": "Move Left/Right",
         "location": {
           "startingColumn": 18,
-          "startingLine": 37
+          "startingLine": 46
         }
       },
       {
@@ -15,7 +15,15 @@
         "key": "Move Forward/Backward",
         "location": {
           "startingColumn": 18,
-          "startingLine": 42
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Loading Scene...",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 36
         }
       },
       {
@@ -23,7 +31,7 @@
         "key": "Release Ring",
         "location": {
           "startingColumn": 22,
-          "startingLine": 55
+          "startingLine": 66
         }
       },
       {
@@ -31,7 +39,7 @@
         "key": "Home from Level %lld",
         "location": {
           "startingColumn": 22,
-          "startingLine": 86
+          "startingLine": 77
         }
       }
     ]

@@ -278,7 +278,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import ObjectiveC;
 #endif
 
 #endif
@@ -300,24 +299,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-@class UIPanGestureRecognizer;
-
-SWIFT_CLASS("_TtC9RingABull11Coordinator")
-@interface Coordinator : NSObject
-- (void)handlePan:(UIPanGestureRecognizer * _Nonnull)gesture;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class UITapGestureRecognizer;
-
-SWIFT_CLASS("_TtC9RingABull17CoordinatorButton")
-@interface CoordinatorButton : NSObject
-- (void)handleTap:(UITapGestureRecognizer * _Nonnull)gesture;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 
 
