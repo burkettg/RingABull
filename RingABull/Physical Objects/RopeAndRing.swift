@@ -24,10 +24,11 @@ class RopeAndRing {
         anchorNode.position = anchorPosition
         anchorNode.physicsBody = SCNPhysicsBody.static()  // Static physics body for the beam
         scene.rootNode.addChildNode(anchorNode)
+        
         // Define rope properties
-        let ropeSegmentCount = 12
-        let ropeSegmentHeight: CGFloat = 0.4  // Height of each segment
-        let ropeRadius: CGFloat = 0.05  // Thin twine-style rope
+        let ropeSegmentCount = 20
+        let ropeSegmentHeight: CGFloat = 0.25  // Height of each segment
+        let ropeRadius: CGFloat = 0.10  // Thin twine-style rope
             
         // Track the previous node (starting with the anchor node)
         var previousNode: SCNNode = anchorNode
@@ -57,8 +58,7 @@ class RopeAndRing {
             // Assign a dynamic physics body to the rope segment
             ropeSegmentNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
             ropeSegmentNode.physicsBody?.isAffectedByGravity = true  // Disable gravity initially
-            ropeSegmentNode.physicsBody?.mass = 0.05  // Light mass for the segments
-            
+            ropeSegmentNode.physicsBody?.mass = 0.15  // Light mass for the segments
             // Add the rope segment to the scene
             scene.rootNode.addChildNode(ropeSegmentNode)
             
