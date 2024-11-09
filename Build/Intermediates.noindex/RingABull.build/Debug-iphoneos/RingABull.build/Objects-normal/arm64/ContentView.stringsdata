@@ -1,0 +1,32 @@
+{
+  "source": "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Wlcome to Ring-A-Bull!",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start Game",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "SET LEVEL",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 66
+        }
+      }
+    ]
+  },
+  "version": 1
+}

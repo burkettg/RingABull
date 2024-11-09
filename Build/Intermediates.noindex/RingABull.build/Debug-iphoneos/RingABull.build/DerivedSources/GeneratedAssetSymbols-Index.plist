@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colors</key>
+	<array/>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameBackGroundImageV4</string>
+			<key>relativePath</key>
+			<string>./BackGroundImageV4.imageset</string>
+			<key>swiftSymbol</key>
+			<string>backGroundImageV4</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameGameMode00</string>
+			<key>relativePath</key>
+			<string>./GameMode00.imageset</string>
+			<key>swiftSymbol</key>
+			<string>gameMode00</string>
+		</dict>
+	</array>
+	<key>symbols</key>
+	<array/>
+</dict>
+</plist>
