@@ -16,19 +16,16 @@
   "hideShellScriptEnvironment" : false,
   "parameters" : {
     "action" : "build",
-    "activeArchitecture" : "arm64",
+    "activeArchitecture" : "x86_64",
     "activeRunDestination" : {
       "disableOnlyActiveArch" : false,
-      "platform" : "iphoneos",
-      "sdk" : "iphoneos18.1",
-      "sdkVariant" : "iphoneos",
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator18.1",
+      "sdkVariant" : "iphonesimulator",
       "supportedArchitectures" : [
-        "arm64e",
-        "arm64v8",
-        "arm64",
-        "armv8"
+        "x86_64"
       ],
-      "targetArchitecture" : "arm64"
+      "targetArchitecture" : "x86_64"
     },
     "arenaInfo" : {
       "buildIntermediatesPath" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex",
@@ -43,17 +40,17 @@
     "overrides" : {
       "synthesized" : {
         "table" : {
-          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone12,1",
-          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "18.1",
-          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone12,1",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone17,3",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "18.0",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone17,3",
           "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
           "ENABLE_PREVIEWS" : "NO",
           "ENABLE_XOJIT_PREVIEWS" : "YES",
           "ONLY_ACTIVE_ARCH" : "YES",
-          "TARGET_DEVICE_IDENTIFIER" : "00008030-0004698C34E3802E",
-          "TARGET_DEVICE_MODEL" : "iPhone12,1",
-          "TARGET_DEVICE_OS_VERSION" : "18.1",
-          "TARGET_DEVICE_PLATFORM_NAME" : "iphoneos"
+          "TARGET_DEVICE_IDENTIFIER" : "823980CB-D3D6-4F10-9295-707E1BC6FA2C",
+          "TARGET_DEVICE_MODEL" : "iPhone17,3",
+          "TARGET_DEVICE_OS_VERSION" : "18.0",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
         }
       }
     }

@@ -50,27 +50,21 @@ struct ContentView: View {
                     Spacer()
                     
                     Button(action: {
-                        isGameActive = true
-                    }){
-                        Text("Start Game")
-                            .font(.title2)
-                            .padding()
-                            .frame(width: 150, height: 50)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    
-                    Button(action: {
                         showingPhysicsWorld = true
                     }){
                         Text("Take a Swing")
                             .font(.title2)
-                            .padding()
-                            .frame(width: 170, height: 50)
+                            .padding(10)
+                            .frame(width: 150, height: 50)
                             .background(Color.blue)
                             .foregroundColor(.white)
                             .cornerRadius(10)
+                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                            .buttonStyle(.borderless)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(.black, lineWidth: 2)
+                            )
                     }
                     // Some preliminary options for different levels..  We have flexibility for evolution.
                     Menu {
@@ -117,8 +111,6 @@ struct ContentView: View {
                 } // End VStack.
                 
             } // End ZStack.
-            //Not sure we need this any longer?
-            .fullScreenCover(isPresented: $isGameActive){ GameView()  }
             // This is the MAIN Game World Jump-in point..
             .fullScreenCover(isPresented: $showingPhysicsWorld, content: {
                 // Add some configuration settings..

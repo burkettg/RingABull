@@ -4,9 +4,5 @@
 <dict>
 	<key>application-identifier</key>
 	<string>T46KAX59T3.com.cribcoders.RingABull</string>
-	<key>com.apple.developer.team-identifier</key>
-	<string>T46KAX59T3</string>
-	<key>get-task-allow</key>
-	<true/>
 </dict>
 </plist>

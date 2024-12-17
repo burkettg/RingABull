@@ -26,7 +26,7 @@ class RopeAndRing {
         scene.rootNode.addChildNode(anchorNode)
         
         // Define rope properties
-        let ropeSegmentCount = 20
+        let ropeSegmentCount = 18
         let ropeSegmentHeight: CGFloat = 0.25  // Height of each segment
         let ropeRadius: CGFloat = 0.10  // Thin twine-style rope
             
@@ -58,7 +58,8 @@ class RopeAndRing {
             // Assign a dynamic physics body to the rope segment
             ropeSegmentNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
             ropeSegmentNode.physicsBody?.isAffectedByGravity = true  // Disable gravity initially
-            ropeSegmentNode.physicsBody?.mass = 0.15  // Light mass for the segments
+            ropeSegmentNode.physicsBody?.mass = 25.0  // Light mass for the segments
+            ropeSegmentNode.physicsBody?.restitution = 0 // Remove bounciness
             // Add the rope segment to the scene
             scene.rootNode.addChildNode(ropeSegmentNode)
             
@@ -68,6 +69,7 @@ class RopeAndRing {
                                                   anchorA: SCNVector3(0, -Float(ropeSegmentHeight) / 2, 0),  // Bottom of previous segment
                                                   bodyB: ropeSegmentNode.physicsBody!,
                                                   anchorB: SCNVector3(0, Float(ropeSegmentHeight) / 2, 0))   // Top of current segment
+            
             scene.physicsWorld.addBehavior(joint)
             
             // Move to the next segment
@@ -105,7 +107,7 @@ class RopeAndRing {
         // Position the ring at the bottom of the last rope segment
         let lastYPosition = anchorPosition.y - (Float(ropeSegmentCount + 1) * Float(ropeSegmentHeight))
         ringNode.position = SCNVector3(anchorPosition.x, lastYPosition, anchorPosition.z)
-                ringNode.physicsBody?.mass = 1.0  // Heavier mass for the metal ring
+        ringNode.physicsBody?.mass = 30.0  // Heavier mass for the metal ring
         ringNode.physicsBody?.isAffectedByGravity = true
         ringNode.physicsBody?.allowsResting = true
         ringNode.name = "ringNode"
