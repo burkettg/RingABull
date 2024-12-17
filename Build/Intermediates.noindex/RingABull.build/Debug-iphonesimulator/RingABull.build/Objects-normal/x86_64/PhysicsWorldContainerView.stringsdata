@@ -1,0 +1,48 @@
+{
+  "source": "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/PhysicsWorldContainerView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Move Left/Right",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "Move Forward/Backward",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Loading Scene...",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "Release Ring",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Home from Level %lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 77
+        }
+      }
+    ]
+  },
+  "version": 1
+}

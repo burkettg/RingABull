@@ -4,10 +4,18 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Wlcome to Ring-A-Bull!",
+        "key": "Welcome to Ring-A-Bull!",
         "location": {
           "startingColumn": 26,
-          "startingLine": 32
+          "startingLine": 38
+        }
+      },
+      {
+        "comment": "",
+        "key": "Current Level: %lld",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 101
         }
       },
       {
@@ -15,15 +23,71 @@
         "key": "Start Game",
         "location": {
           "startingColumn": 30,
-          "startingLine": 51
+          "startingLine": 55
         }
       },
       {
         "comment": "",
-        "key": "SET LEVEL",
+        "key": "Take a Swing",
         "location": {
           "startingColumn": 30,
-          "startingLine": 64
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_05",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 78
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_04",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_03",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 80
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_02",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 81
+        }
+      },
+      {
+        "comment": "",
+        "key": "Level_01",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "Set Level",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 84
         }
       }
     ]

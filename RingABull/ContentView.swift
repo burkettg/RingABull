@@ -7,80 +7,149 @@
  * I am creating this branch to play around in XCode and get a background going.
  */
 // change.
-import SwiftUI      //Import SwifUI framework - this is used to build user interfaces
+import SwiftUI
 
-//Here we want to declare a new struct that will be needed for the visual component/screen
 struct ContentView: View {
-    @State private var isGameActive = false     //State control of the game... is game play active.
+    //State control of the game... is game play active.
+    @State private var isGameActive = false
+    @State private var showingPhysicsWorld = false
+    // Set and retain current game level.
+    @AppStorage("currentLevel") var currentGameLevel: Int = 1
     
-    //Here is the main body of the contentView where elements of the UI are defined
+    // Get ring position for control sliders.
+    @State private var xPosition: Float = 0
+    @State private var zPosition: Float = 0
+        
+    // Create the coordinator at this level
+    @StateObject var coordinator = PhysicsWorldCoordinator()  // Now this coordinator is in scope
+    
     var body: some View {
         NavigationView{
-            //A vertical stack that arranges the UI elements (Children) in a vertical line
+            
             ZStack {
                 
-                //Here I will work with the background/background image
                 Image("BackGroundImageV4")
-                    .resizable()         //Make the image resizeable to the screen
-                    .scaledToFill()      //Nees to make sure the image can fill the screen
-                    .ignoresSafeArea()   //Makes the image cover the entire screen!
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
                 
-                //Next, I will work with the foreground content
-                //Need to create a new VStack
                 VStack{
                     
-                    Text("Wlcome to Ring-A-Bull!")      //Text that says hello to user
-                        .font(.largeTitle)              //Define the font of the text above
-                        .fontWeight(.bold)              //Define the weight of the font
-                        .foregroundColor(.white)        //Define the foreground color
-                        .padding()                      //Add some padding after the text
+                    Text("Welcome to Ring-A-Bull!")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
                     
                 }
-                
-                // Expands the ZStack to fill the entire screen
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                .padding(.top, 85)   //Need to add some padding after the welcome text
+                .padding(.top, 85)
                 
-                //Need to create a vertical stack for the buttons to our home screen.
                 VStack{
                     
-                    //Define a button that will trigger the game play
+                    Spacer()
+                    
                     Button(action: {
-                        isGameActive = true     //Set the isGameActive flag to true
+                        isGameActive = true
                     }){
-                        Text("Start Game")      //Define what the button displays
-                            .font(.title2)      //Define the font for the button's txt
-                            .padding()                      //Add some padding
-                            .frame(width: 150, height: 50)  //Define some frame dimensions
-                            .background(Color.blue)         //Define the background color
-                            .foregroundColor(.white)        //Define the foreground color
-                            .cornerRadius(10)               //Define the corner radius of the button
+                        Text("Start Game")
+                            .font(.title2)
+                            .padding()
+                            .frame(width: 150, height: 50)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
                     
-                    //Define a second button
                     Button(action: {
-                        print("Settings!")      //Define the action of the button
+                        showingPhysicsWorld = true
                     }){
-                        Text("SET LEVEL")       //Define the text that the button displays
-                            .font(.title2)      //Define the font of the button
-                            .padding(10)        //Add some padding around the button
-                            .frame(width: 150, height: 50)      //Add a frame with dimensions
-                            .background(Color.blue)             //Define a background color
-                            .foregroundColor(.white)            //Define a foreground color
-                            .cornerRadius(10)                   //Add the corner radius of the button
+                        Text("Take a Swing")
+                            .font(.title2)
+                            .padding()
+                            .frame(width: 170, height: 50)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
-                }
+                    // Some preliminary options for different levels..  We have flexibility for evolution.
+                    Menu {
+                        Button("Cancel", action: { print("cancel") })
+                        Button("Level_05", action: { currentGameLevel = 5 })
+                        Button("Level_04", action: { currentGameLevel = 4 })
+                        Button("Level_03", action: { currentGameLevel = 3 })
+                        Button("Level_02", action: { currentGameLevel = 2 })
+                        Button("Level_01", action: { currentGameLevel = 1 })
+                    } label: {
+                        Text("Set Level")
+                    }
+                    .font(.title2)
+                    .padding(10)
+                    .frame(width: 150, height: 50)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                    .buttonStyle(.borderless)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(.black, lineWidth: 2)
+                    )
+                    
+                    Spacer()
+                    
+                    Text("Current Level: \(currentGameLevel)")
+                        .font(.title3)
+                        .padding(10)
+                        .frame(width: 200, height: 50)
+                        .background(Color.white)
+                        .foregroundColor(.black)
+                        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                        .buttonStyle(.borderless)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(.black, lineWidth: 2)
+                        )
+                    
+                    Spacer()
+                        .frame(height: 20)
+                    
+                } // End VStack.
                 
-            }
+            } // End ZStack.
+            //Not sure we need this any longer?
+            .fullScreenCover(isPresented: $isGameActive){ GameView()  }
+            // This is the MAIN Game World Jump-in point..
+            .fullScreenCover(isPresented: $showingPhysicsWorld, content: {
+                // Add some configuration settings..
+                
+                //PhysicsWorldContainerView()
+                PhysicsWorldContainerView( coordinator: coordinator )
+                    .onDisappear(perform: reset)
+                
+            })
             
-            //Here I will present the GameView modally as a full screen view when isGameActive = true
-            .fullScreenCover(isPresented: $isGameActive){
-                GameView()  //When isGameActive = true, call GameView() func
+        } // End Navigation View.
+        
+    } // End Main Body.
+    
+    // Function to return the current world based on progression
+        func getCurrentWorldView() -> AnyView {
+            switch currentGameLevel {
+            case 1: return AnyView(PhysicsWorldView_Level01(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 2: return AnyView(PhysicsWorldView_Level02(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 3: return AnyView(PhysicsWorldView_Level03(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 4: return AnyView(PhysicsWorldView_Level04(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 5: return AnyView(PhysicsWorldView_Level05(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
+            default: return AnyView(PhysicsWorldView_Level01(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
             }
         }
-    }
-}
+    
+} // End ContentView struct.
 
-#Preview {
-    ContentView()
+func reset() {
+    //  Change some settings, score, history ,etc..  stuff here..
+    //  .. blah blah ...
+    print("back to contentView from PhysicsWorldView_Level01.")
+    
 }

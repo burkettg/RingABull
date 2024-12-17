@@ -8,6 +8,10 @@
 import Foundation       //Import the foundation library
 import SwiftUI          //Import the SwiftUI library/framework
 
+// ?? ............................... ?? //
+//  This is likely an obsolete struct.   //
+// ?? ............................... ?? //
+
 //Create a struct for the GameView
 struct GameView: View {
     

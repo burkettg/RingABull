@@ -37,6 +37,42 @@ extension DeveloperToolsSupport.ImageResource {
     /// The "GameMode00" asset catalog image resource.
     static let gameMode00 = DeveloperToolsSupport.ImageResource(name: "GameMode00", bundle: resourceBundle)
 
+    /// The "bostonFernImage" asset catalog image resource.
+    static let bostonFern = DeveloperToolsSupport.ImageResource(name: "bostonFernImage", bundle: resourceBundle)
+
+    /// The "bricksWorn" asset catalog image resource.
+    static let bricksWorn = DeveloperToolsSupport.ImageResource(name: "bricksWorn", bundle: resourceBundle)
+
+    /// The "decorPot" asset catalog image resource.
+    static let decorPot = DeveloperToolsSupport.ImageResource(name: "decorPot", bundle: resourceBundle)
+
+    /// The "dirtFloor" asset catalog image resource.
+    static let dirtFloor = DeveloperToolsSupport.ImageResource(name: "dirtFloor", bundle: resourceBundle)
+
+    /// The "metalGrates" asset catalog image resource.
+    static let metalGrates = DeveloperToolsSupport.ImageResource(name: "metalGrates", bundle: resourceBundle)
+
+    /// The "metalRusty" asset catalog image resource.
+    static let metalRusty = DeveloperToolsSupport.ImageResource(name: "metalRusty", bundle: resourceBundle)
+
+    /// The "planksDark" asset catalog image resource.
+    static let planksDark = DeveloperToolsSupport.ImageResource(name: "planksDark", bundle: resourceBundle)
+
+    /// The "planksGray" asset catalog image resource.
+    static let planksGray = DeveloperToolsSupport.ImageResource(name: "planksGray", bundle: resourceBundle)
+
+    /// The "shutterRusted" asset catalog image resource.
+    static let shutterRusted = DeveloperToolsSupport.ImageResource(name: "shutterRusted", bundle: resourceBundle)
+
+    /// The "tilesAqua" asset catalog image resource.
+    static let tilesAqua = DeveloperToolsSupport.ImageResource(name: "tilesAqua", bundle: resourceBundle)
+
+    /// The "woodWeathered" asset catalog image resource.
+    static let woodWeathered = DeveloperToolsSupport.ImageResource(name: "woodWeathered", bundle: resourceBundle)
+
+    /// The "woodWorn" asset catalog image resource.
+    static let woodWorn = DeveloperToolsSupport.ImageResource(name: "woodWorn", bundle: resourceBundle)
+
 }
 
 // MARK: - Color Symbol Extensions -
@@ -94,6 +130,114 @@ extension AppKit.NSImage {
 #endif
     }
 
+    /// The "bostonFernImage" asset catalog image.
+    static var bostonFern: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .bostonFern)
+#else
+        .init()
+#endif
+    }
+
+    /// The "bricksWorn" asset catalog image.
+    static var bricksWorn: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .bricksWorn)
+#else
+        .init()
+#endif
+    }
+
+    /// The "decorPot" asset catalog image.
+    static var decorPot: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .decorPot)
+#else
+        .init()
+#endif
+    }
+
+    /// The "dirtFloor" asset catalog image.
+    static var dirtFloor: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .dirtFloor)
+#else
+        .init()
+#endif
+    }
+
+    /// The "metalGrates" asset catalog image.
+    static var metalGrates: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .metalGrates)
+#else
+        .init()
+#endif
+    }
+
+    /// The "metalRusty" asset catalog image.
+    static var metalRusty: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .metalRusty)
+#else
+        .init()
+#endif
+    }
+
+    /// The "planksDark" asset catalog image.
+    static var planksDark: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .planksDark)
+#else
+        .init()
+#endif
+    }
+
+    /// The "planksGray" asset catalog image.
+    static var planksGray: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .planksGray)
+#else
+        .init()
+#endif
+    }
+
+    /// The "shutterRusted" asset catalog image.
+    static var shutterRusted: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .shutterRusted)
+#else
+        .init()
+#endif
+    }
+
+    /// The "tilesAqua" asset catalog image.
+    static var tilesAqua: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .tilesAqua)
+#else
+        .init()
+#endif
+    }
+
+    /// The "woodWeathered" asset catalog image.
+    static var woodWeathered: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .woodWeathered)
+#else
+        .init()
+#endif
+    }
+
+    /// The "woodWorn" asset catalog image.
+    static var woodWorn: AppKit.NSImage {
+#if !targetEnvironment(macCatalyst)
+        .init(resource: .woodWorn)
+#else
+        .init()
+#endif
+    }
+
 }
 #endif
 
@@ -115,6 +259,114 @@ extension UIKit.UIImage {
     static var gameMode00: UIKit.UIImage {
 #if !os(watchOS)
         .init(resource: .gameMode00)
+#else
+        .init()
+#endif
+    }
+
+    /// The "bostonFernImage" asset catalog image.
+    static var bostonFern: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .bostonFern)
+#else
+        .init()
+#endif
+    }
+
+    /// The "bricksWorn" asset catalog image.
+    static var bricksWorn: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .bricksWorn)
+#else
+        .init()
+#endif
+    }
+
+    /// The "decorPot" asset catalog image.
+    static var decorPot: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .decorPot)
+#else
+        .init()
+#endif
+    }
+
+    /// The "dirtFloor" asset catalog image.
+    static var dirtFloor: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .dirtFloor)
+#else
+        .init()
+#endif
+    }
+
+    /// The "metalGrates" asset catalog image.
+    static var metalGrates: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .metalGrates)
+#else
+        .init()
+#endif
+    }
+
+    /// The "metalRusty" asset catalog image.
+    static var metalRusty: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .metalRusty)
+#else
+        .init()
+#endif
+    }
+
+    /// The "planksDark" asset catalog image.
+    static var planksDark: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .planksDark)
+#else
+        .init()
+#endif
+    }
+
+    /// The "planksGray" asset catalog image.
+    static var planksGray: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .planksGray)
+#else
+        .init()
+#endif
+    }
+
+    /// The "shutterRusted" asset catalog image.
+    static var shutterRusted: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .shutterRusted)
+#else
+        .init()
+#endif
+    }
+
+    /// The "tilesAqua" asset catalog image.
+    static var tilesAqua: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .tilesAqua)
+#else
+        .init()
+#endif
+    }
+
+    /// The "woodWeathered" asset catalog image.
+    static var woodWeathered: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .woodWeathered)
+#else
+        .init()
+#endif
+    }
+
+    /// The "woodWorn" asset catalog image.
+    static var woodWorn: UIKit.UIImage {
+#if !os(watchOS)
+        .init(resource: .woodWorn)
 #else
         .init()
 #endif
