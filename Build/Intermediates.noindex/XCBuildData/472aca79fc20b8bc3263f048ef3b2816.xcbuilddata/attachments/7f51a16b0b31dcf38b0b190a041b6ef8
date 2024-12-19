@@ -85,16 +85,6 @@
     "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldCoordinator.swiftdeps",
     "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldCoordinator~partial.swiftmodule"
   },
-  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/GameView.swift" : {
-    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.swiftconstvalues",
-    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.d",
-    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.dia",
-    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.o",
-    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.bc",
-    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.o",
-    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView.swiftdeps",
-    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/GameView~partial.swiftmodule"
-  },
   "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/Physical Objects/Room.swift" : {
     "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Room.swiftconstvalues",
     "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/Room.d",
@@ -114,6 +104,16 @@
     "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeAndRing.o",
     "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeAndRing.swiftdeps",
     "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/RopeAndRing~partial.swiftmodule"
+  },
+  "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/PhysicsContactHandler.swift" : {
+    "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsContactHandler.swiftconstvalues",
+    "dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsContactHandler.d",
+    "diagnostics" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsContactHandler.dia",
+    "index-unit-output-path" : "/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsContactHandler.o",
+    "llvm-bc" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsContactHandler.bc",
+    "object" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsContactHandler.o",
+    "swift-dependencies" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsContactHandler.swiftdeps",
+    "swiftmodule" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsContactHandler~partial.swiftmodule"
   },
   "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/RingABull/PhysicsWorldContainerView.swift" : {
     "const-values" : "/Users/gbhome/Documents/GB_IOS_DEV/SwiftApps/RingABull/Build/Intermediates.noindex/RingABull.build/Debug-iphonesimulator/RingABull.build/Objects-normal/x86_64/PhysicsWorldContainerView.swiftconstvalues",

@@ -18,6 +18,7 @@ struct PhysicsWorldContainerView: View {
     @AppStorage("currentLevel") var currentGameLevel: Int = 1
 
     @State var xPosition: Float = 0
+    @State var yPosition: Float = 0
     @State var zPosition: Float = 0
     @State var sceneView: SCNView? = nil  // Store the SCNView
 
@@ -48,7 +49,16 @@ struct PhysicsWorldContainerView: View {
                 .padding()
                 .onChange(of: xPosition) { _, newValue in
                     deactivateGravity()  // Ensure gravity is disabled when slider starts moving
-                    moveRing(x: newValue, z: zPosition)
+                    moveRing(x: newValue, y: yPosition, z: zPosition)
+                }
+            
+            // Slider for moving the ring forward/backward (Z axis)
+            Text("Move Up/Down")
+            Slider(value: $yPosition, in: -10...10, step: 0.1)
+                .padding()
+                .onChange(of: yPosition) { _, newValue in
+                    deactivateGravity()  // Ensure gravity is disabled when slider starts moving
+                    moveRing(x: xPosition, y: yPosition, z: newValue)
                 }
 
             // Slider for moving the ring forward/backward (Z axis)
@@ -57,9 +67,9 @@ struct PhysicsWorldContainerView: View {
                 .padding()
                 .onChange(of: zPosition) { _, newValue in
                     deactivateGravity()  // Ensure gravity is disabled when slider starts moving
-                    moveRing(x: xPosition, z: newValue)
+                    moveRing(x: xPosition, y: yPosition, z: newValue)
                 }
-
+            
             Button(action: {
                 releaseRing()  // Re-enable gravity when release button is pressed
             }) {
@@ -123,9 +133,10 @@ struct PhysicsWorldContainerView: View {
     }
 
     // Move the ring manually, deactivating gravity and physics
-    func moveRing(x: Float, z: Float) {
+    func moveRing(x: Float, y: Float, z: Float) {
         if let ringNode = coordinator.ringNode {
             ringNode.position.x = x
+            ringNode.position.y = y
             ringNode.position.z = z
         }
     }
@@ -158,7 +169,7 @@ struct PhysicsWorldContainerView: View {
             coordinator.removeJoint(joint)  // Remove the joint to stop it applying forces
         }
         
-        print("Physics and forces disabled for ring and rope segments.")
+        //print("Physics and forces disabled for ring and rope segments.")
     }
 
 
@@ -167,6 +178,7 @@ struct PhysicsWorldContainerView: View {
             if let physicsBody = ringNode.physicsBody {
                 physicsBody.isAffectedByGravity = true  // Re-enable gravity
                 physicsBody.damping = 0.1  // Reset damping to normal levels
+                increaseVelocityForward()
             }
         }
 
@@ -175,6 +187,7 @@ struct PhysicsWorldContainerView: View {
             if let segmentPhysicsBody = segment.physicsBody {
                 segmentPhysicsBody.isAffectedByGravity = true  // Re-enable gravity
                 segmentPhysicsBody.damping = 0.1  // Reset damping to normal levels
+                increaseVelocityForward()
             }
         }
 
@@ -183,7 +196,40 @@ struct PhysicsWorldContainerView: View {
             coordinator.addJoint(joint)  // Re-add the joint to reactivate it
         }
 
-        print("Ring and rope segments released, physics enabled.")
+        //print("Ring and rope segments released, physics enabled.")
+    }
+    
+    func increaseVelocityForward() {
+        guard let ringNode = coordinator.ringNode, let physicsBody = ringNode.physicsBody else { return }
+        
+        // Get the forward direction of the node in world space
+        let forwardDirection = ringNode.presentation.worldTransform.forwardDirection
+        
+        // Adjust the force magnitude (higher for more acceleration)
+        let forceMagnitude: Float = 200.0
+        let force = SCNVector3(
+            forwardDirection.x * forceMagnitude,
+            forwardDirection.y * forceMagnitude,
+            forwardDirection.z * forceMagnitude
+        )
+        
+        // Apply the force to the physics body
+        physicsBody.applyForce(force, asImpulse: false) // Continuous force for acceleration
     }
 
+    
+    
+    
+    
+
+}
+
+
+
+// Extension to get forward direction from an SCNMatrix4
+extension SCNMatrix4 {
+    var forwardDirection: SCNVector3 {
+        // The negative Z-axis in SceneKit represents forward direction
+        return SCNVector3(-m31, -m32, -m33)
+    }
 }

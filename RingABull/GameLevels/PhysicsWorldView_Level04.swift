@@ -11,6 +11,7 @@ import UIKit
 
 struct PhysicsWorldView_Level04: UIViewRepresentable {
     @Binding var xPosition: Float
+    @Binding var yPosition: Float
     @Binding var zPosition: Float
     
     let room = Room(level: 4)
@@ -42,6 +43,7 @@ struct PhysicsWorldView_Level04: UIViewRepresentable {
             }
             // Move the ring to the new slider position
             ring.position.x = xPosition
+            ring.position.y = yPosition
             ring.position.z = zPosition
         }
     }

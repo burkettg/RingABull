@@ -76,6 +76,41 @@ struct Room {
         targetNode.position = SCNVector3(0, wallHeight / 2, -wallWidth / 2 + 0.2)  // Slightly in front of wall
         targetNode.physicsBody = SCNPhysicsBody.static()  // Target is static
         scene.rootNode.addChildNode(targetNode)
+        
+        
+        //  Some hook shit..
+        
+        // Create the hook base (vertical cylinder)
+        let hookBase = SCNCylinder(radius: 0.1, height: 1.0) // Thin vertical cylinder
+        let hookMaterial = SCNMaterial()
+        hookMaterial.diffuse.contents = UIColor.orange // Hook color
+        hookBase.materials = [hookMaterial]
+
+        let hookBaseNode = SCNNode(geometry: hookBase)
+        hookBaseNode.position = SCNVector3(0, wallHeight / 2, -wallWidth / 2 + 1.2) // Centered on the wall
+        hookBaseNode.physicsBody = SCNPhysicsBody.static() // Static physics body
+        hookBaseNode.physicsBody?.categoryBitMask = CollisionCategory.hook
+        hookBaseNode.physicsBody?.contactTestBitMask = CollisionCategory.ring
+       scene.rootNode.addChildNode(hookBaseNode)
+
+        // Add the angled part of the hook (cylinder angled upward)
+        let hookPart = SCNCylinder(radius: 0.10, height: 1.5) // Thin cylinder for the angled part
+        let hookPartNode = SCNNode(geometry: hookPart)
+        hookPartNode.geometry?.materials = [hookMaterial]
+        hookPartNode.position = SCNVector3(0, 0.5, 0) // Position relative to the hook base
+        hookPartNode.eulerAngles = SCNVector3(-Float.pi / 4, 0, 0) // Angle the hook part upward
+        hookBaseNode.addChildNode(hookPartNode) // Attach to the base
+
+        // Add the hook tip (optional rounded tip using a torus)
+        let hookTip = SCNTorus(ringRadius: 0.15, pipeRadius: 0.03) // Torus for the curved tip
+        let hookTipNode = SCNNode(geometry: hookTip)
+        hookTipNode.geometry?.materials = [hookMaterial]
+        hookTipNode.position = SCNVector3(0, 0.8, 0.2) // Adjust position to align with the upward stick
+        hookTipNode.eulerAngles = SCNVector3(-Float.pi / 2, 0, 0) // Rotate to align correctly
+        hookBaseNode.addChildNode(hookTipNode) // Attach to the base
+
+
+        
 
         // Add left and right walls (similarly to the back wall)
         let leftWall = SCNBox(width: wallDepth, height: wallHeight, length: wallWidth, chamferRadius: 0)
@@ -121,7 +156,8 @@ struct Room {
         
         let beam = SCNBox(width: beamLength, height: beamThickness, length: 0.3, chamferRadius: 0)
         let beamNode = SCNNode(geometry: beam)
-        beamNode.position = SCNVector3(0, wallHeight - beamThickness / 2, 0)  // Beam's position
+        beamNode.position = SCNVector3(0, wallHeight - beamThickness / 2, -wallWidth / 2 + 4.0)  // Beam's position
+        //SCNVector3(0, wallHeight / 2, -wallWidth / 2 + 0.2)
         beamNode.physicsBody = SCNPhysicsBody.static()  // Beam is static
         beamNode.name = "beam"  // Name the beam so we can reference it later
             
@@ -151,7 +187,7 @@ struct Room {
         // Add a camera to ensure the scene is visible
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
-        cameraNode.position = SCNVector3(0, wallHeight / 2, 15)  // Move the camera to see the entire scene
+        cameraNode.position = SCNVector3(0, wallHeight / 2, 10)  // Move the camera to see the entire scene
         scene.rootNode.addChildNode(cameraNode)
         
         // Set the background color for better contrast

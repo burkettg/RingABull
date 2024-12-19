@@ -26,8 +26,8 @@ class RopeAndRing {
         scene.rootNode.addChildNode(anchorNode)
         
         // Define rope properties
-        let ropeSegmentCount = 18
-        let ropeSegmentHeight: CGFloat = 0.25  // Height of each segment
+        let ropeSegmentCount = 10
+        let ropeSegmentHeight: CGFloat = 0.40  // Height of each segment
         let ropeRadius: CGFloat = 0.10  // Thin twine-style rope
             
         // Track the previous node (starting with the anchor node)
@@ -58,19 +58,51 @@ class RopeAndRing {
             // Assign a dynamic physics body to the rope segment
             ropeSegmentNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
             ropeSegmentNode.physicsBody?.isAffectedByGravity = true  // Disable gravity initially
-            ropeSegmentNode.physicsBody?.mass = 25.0  // Light mass for the segments
-            ropeSegmentNode.physicsBody?.restitution = 0 // Remove bounciness
+            
+            switch i {
+            case 1: ropeSegmentNode.physicsBody?.mass = 15.0  // Light mass for the segments
+            case 2: ropeSegmentNode.physicsBody?.mass = 25.0  // Light mass for the segments
+            case 3: ropeSegmentNode.physicsBody?.mass = 35.0  // Light mass for the segments
+            case 4: ropeSegmentNode.physicsBody?.mass = 35.0  // Light mass for the segments
+            case 5: ropeSegmentNode.physicsBody?.mass = 35.0  // Light mass for the segments
+            case 6: ropeSegmentNode.physicsBody?.mass = 45.0  // Light mass for the segments
+            case 7: ropeSegmentNode.physicsBody?.mass = 45.0  // Light mass for the segments
+            case 8: ropeSegmentNode.physicsBody?.mass = 45.0  // Light mass for the segments
+            case 9: ropeSegmentNode.physicsBody?.mass = 55.0  // Light mass for the segments
+            case 10: ropeSegmentNode.physicsBody?.mass = 55.0  // Light mass for the segments
+            default: ropeSegmentNode.physicsBody?.mass = 65.0  // Light mass for the segments
+            }
+            //ropeSegmentNode.physicsBody?.mass = 35.0  // Light mass for the segments
+            
+            
+            ropeSegmentNode.physicsBody?.restitution = 0.01 // Remove bounciness
             // Add the rope segment to the scene
             scene.rootNode.addChildNode(ropeSegmentNode)
             
             // Create a ball-socket joint between the current segment and the previous one
             // Using local positions: Top of previous node (+height/2) connects to bottom of current node (-height/2)
-            let joint = SCNPhysicsBallSocketJoint(bodyA: previousNode.physicsBody!,
+        /*    let joint = SCNPhysicsBallSocketJoint(bodyA: previousNode.physicsBody!,
                                                   anchorA: SCNVector3(0, -Float(ropeSegmentHeight) / 2, 0),  // Bottom of previous segment
                                                   bodyB: ropeSegmentNode.physicsBody!,
                                                   anchorB: SCNVector3(0, Float(ropeSegmentHeight) / 2, 0))   // Top of current segment
             
             scene.physicsWorld.addBehavior(joint)
+         */
+            
+            let sliderJoint = SCNPhysicsSliderJoint(
+                        bodyA: previousNode.physicsBody!,
+                        axisA: SCNVector3(0, 1, 0), // Vertical axis for movement
+                        anchorA: SCNVector3(0, -Float(ropeSegmentHeight) / 2, 0),  // Bottom of previous segment
+                        bodyB: ropeSegmentNode.physicsBody!,
+                        axisB: SCNVector3(0, 1, 0),  // Vertical axis for movement
+                        anchorB: SCNVector3(0, Float(ropeSegmentHeight) / 2, 0)   // Top of current segment
+                    )
+                    
+                    sliderJoint.minimumLinearLimit = 0 // Prevent segments from moving closer
+                    sliderJoint.maximumLinearLimit = 0 // Prevent segments from stretching apart
+                    
+                    scene.physicsWorld.addBehavior(sliderJoint)
+            
             
             // Move to the next segment
             previousNode = ropeSegmentNode
@@ -107,9 +139,15 @@ class RopeAndRing {
         // Position the ring at the bottom of the last rope segment
         let lastYPosition = anchorPosition.y - (Float(ropeSegmentCount + 1) * Float(ropeSegmentHeight))
         ringNode.position = SCNVector3(anchorPosition.x, lastYPosition, anchorPosition.z)
-        ringNode.physicsBody?.mass = 30.0  // Heavier mass for the metal ring
+        ringNode.physicsBody?.mass = 65.0  // Heavier mass for the metal ring
+        ringNode.physicsBody?.restitution = 0.01 // Remove bounciness
         ringNode.physicsBody?.isAffectedByGravity = true
         ringNode.physicsBody?.allowsResting = true
+        // assign collision categories to detect contact
+        ringNode.physicsBody?.categoryBitMask = CollisionCategory.ring
+        ringNode.physicsBody?.contactTestBitMask = CollisionCategory.hook
+        
+        
         ringNode.name = "ringNode"
         // Corrected attachment point: Top of the ring's outer edge
         let ringTopAttachmentPoint = SCNVector3(0, 0, Float(ring.ringRadius + ring.pipeRadius))

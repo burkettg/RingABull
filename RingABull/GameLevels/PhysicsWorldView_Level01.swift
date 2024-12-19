@@ -10,6 +10,7 @@ import SceneKit
 
 struct PhysicsWorldView_Level01: UIViewRepresentable {
     @Binding var xPosition: Float
+    @Binding var yPosition: Float
     @Binding var zPosition: Float
     
     let room = Room(level: 1)
@@ -18,7 +19,7 @@ struct PhysicsWorldView_Level01: UIViewRepresentable {
     func makeUIView(context: Context) -> SCNView {
         let sceneView = SCNView()
         sceneView.scene = createScene(context: context)
-        sceneView.allowsCameraControl = false
+        sceneView.allowsCameraControl = true
         sceneView.autoenablesDefaultLighting = true
 
         // Debug print to ensure the scene is not nil
@@ -41,6 +42,7 @@ struct PhysicsWorldView_Level01: UIViewRepresentable {
             }
             // Move the ring to the new slider position
             ring.position.x = xPosition
+            ring.position.y = yPosition
             ring.position.z = zPosition
         }
     }
@@ -49,6 +51,13 @@ struct PhysicsWorldView_Level01: UIViewRepresentable {
         let scene = SCNScene()
         // Apply gravity to the scene
         scene.physicsWorld.gravity = SCNVector3(0, -9.8, 0)
+        
+        // Assign the contact delegate
+        let physicsHandler = PhysicsContactHandler()
+        scene.physicsWorld.contactDelegate = physicsHandler
+
+        
+        
         // Add the room and rope/ring to the scene
         if let ringNode = room.addRoom(to: scene, coordinator: coordinator) {
             // Set the ringNode in the coordinator

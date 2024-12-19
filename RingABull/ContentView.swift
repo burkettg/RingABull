@@ -18,6 +18,7 @@ struct ContentView: View {
     
     // Get ring position for control sliders.
     @State private var xPosition: Float = 0
+    @State private var yPosition: Float = 0
     @State private var zPosition: Float = 0
         
     // Create the coordinator at this level
@@ -128,12 +129,12 @@ struct ContentView: View {
     // Function to return the current world based on progression
         func getCurrentWorldView() -> AnyView {
             switch currentGameLevel {
-            case 1: return AnyView(PhysicsWorldView_Level01(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
-            case 2: return AnyView(PhysicsWorldView_Level02(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
-            case 3: return AnyView(PhysicsWorldView_Level03(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
-            case 4: return AnyView(PhysicsWorldView_Level04(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
-            case 5: return AnyView(PhysicsWorldView_Level05(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
-            default: return AnyView(PhysicsWorldView_Level01(xPosition: $xPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 1: return AnyView(PhysicsWorldView_Level01(xPosition: $xPosition, yPosition: $yPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 2: return AnyView(PhysicsWorldView_Level02(xPosition: $xPosition, yPosition: $yPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 3: return AnyView(PhysicsWorldView_Level03(xPosition: $xPosition, yPosition: $yPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 4: return AnyView(PhysicsWorldView_Level04(xPosition: $xPosition, yPosition: $yPosition, zPosition: $zPosition, coordinator: coordinator))
+            case 5: return AnyView(PhysicsWorldView_Level05(xPosition: $xPosition, yPosition: $yPosition, zPosition: $zPosition, coordinator: coordinator))
+            default: return AnyView(PhysicsWorldView_Level01(xPosition: $xPosition, yPosition: $yPosition, zPosition: $zPosition, coordinator: coordinator))
             }
         }
     
